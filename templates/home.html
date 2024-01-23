@@ -5,60 +5,59 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    {% comment %} <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% endcomment %}
-    <meta http-equiv="cache-control" content="max-age=604800" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>SuperKart</title>
 
-    {% comment %} jquery {% endcomment %}
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    {% comment %} bootstrap {% endcomment %}
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
 
-    {% comment %} font awesome {% endcomment %}
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    {% comment %} custom css {% endcomment %}
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
-    {% comment %} custom js {% endcomment %}
+    <!-- Custom JS -->
     <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
-
 </head>
 <body>
     <header class="header-section">
-        <nav class="navbar p-md-0 navbar-expand-sm navbar-light border-bottom">
+        <nav class="navbar navbar-expand-sm navbar-light border-bottom">
             <div class="container">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarTop4">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                         <a href="#" class="nav-link"> English </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                         <a href="#" class="nav-link"> USD </a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li>
-                         <a href="#" class="nav-link"> <i class="fa fa-envelope"> Email Us </a>
-                    </li>
-                    <li>
-                         <a href="#" class="nav-link"> <i class="fa fa-phone"> Call Us </a>
-                    </li>
-                </ul>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTop4">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">English</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">USD</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="fa fa-envelope"></i> Email Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="fa fa-phone"></i> Call Us</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
-{% comment %} Main Header {% endcomment %}
 
+        <!-- Main Header -->
         <section class="main-header">
-            <div class = "container">
+            <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-12 col-md-3 col-6">
                         <a href="{% url 'home' %}" class="site-logo">
@@ -68,19 +67,19 @@
                     <div class="col-6 col-lg col-sm col-md flex-grow-0">
                         <div class="category dropdown d-inline-block float-right">
                             <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <i class="fa fa-bars"></i>  Categories
+                                <i class="fa fa-bars"></i>  Categories
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-outline-dark"> Shop </a>
+                    <a href="#" class="btn btn-outline-dark ml-auto">Shop</a>
                     <div class="col-lg col-md-6 col-sm-6 col">
                         <form action="#" class="header-search-form">
                             <div class="input-group w-100">
@@ -108,26 +107,25 @@
                                     <div class="icon-wrap icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
                                     <span class="badge badge-pill badge-danger notify">0</span>
                             </a>
-                        </div> <!-- d-flex end -->
-                    </div> <!-- col end -->
-                </div> <!-- row end -->
-            </div> <!-- container end -->
-        </section> <!-- main header end -->
-    </header> <!-- header section end -->
-    
-    {% comment %} MAIN SECTION {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- Main Section -->
     <section class="main-section padding-y-sm">
-    <div class="container">
-        {% block content %}
-        {% endblock %}
-    <div class="main-banner-wrap">
-        <img src="{% static './images/banners/1.jpg' %}" alt="banner" class="img-fluid rounded">
-    </div>
-    </div>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+            <div class="main-banner-wrap">
+                <img src="{% static './images/banners/1.jpg' %}" alt="banner" class="img-fluid rounded">
+            </div>
+        </div>
     </section>
-    {% comment %} MAIN SECTION END {% endcomment %}
-    
-    {% comment %} PRODUCT SECTION {% endcomment %}
+
+    <!-- Product Section -->
     <section class="section-name padding-y-sm bg">
         <div class="container">
 
@@ -142,44 +140,43 @@
                         <a href="#" class="img-wrap"> <img src="{% static './images/items/1.jpg' %}"> </a>
                         <figcaption class="info-wrap">
                             <a href="#" class="title">Just another product name</a>
-                            <div class="price mt-1">$80.00</div> <!-- price-wrap.// -->
+                            <div class="price mt-1">$80.00</div>
                         </figcaption>
                     </div>
-                </div> <!-- col.// -->
+                </div>
                 <div class="col-md-3">
                     <div href="#" class="card card-product-grid">
                         <a href="#" class="img-wrap"> <img src="{% static './images/items/2.jpg' %}"> </a>
                         <figcaption class="info-wrap">
                             <a href="#" class="title">Some item name here</a>
-                            <div class="price mt-1">$180.00</div> <!-- price-wrap.// -->
+                            <div class="price mt-1">$180.00</div>
                         </figcaption>
                     </div>
-                </div> <!-- col.// -->
+                </div>
                 <div class="col-md-3">
                     <div href="#" class="card card-product-grid">
                         <a href="#" class="img-wrap"> <img src="{% static './images/items/3.jpg' %}"> </a>
                         <figcaption class="info-wrap">
                             <a href="#" class="title">Great product name here</a>
-                            <div class="price mt-1">$26.00</div> <!-- price-wrap.// -->
+                            <div class="price mt-1">$26.00</div>
                         </figcaption>
                     </div>
-                </div> <!-- col.// -->
+                </div>
                 <div class="col-md-3">
                     <div href="#" class="card card-product-grid">
                         <a href="#" class="img-wrap"> <img src="{% static './images/items/4.jpg' %}"> </a>
                         <figcaption class="info-wrap">
                             <a href="#" class="title">Just another product name</a>
-                            <div class="price mt-1">$320.00</div> <!-- price-wrap.// -->
+                            <div class="price mt-1">$320.00</div>
                         </figcaption>
                     </div>
-                </div> <!-- col.// -->
-            </div> <!-- row.// -->
+                </div>
+            </div>
 
         </div><!-- container // -->
     </section>
-    {% comment %} PRODUCT SECTION END {% endcomment %}
-    
-    {% comment %} FOOTER SECTION {% endcomment %}
+
+    <!-- Footer Section -->
     <footer class="section-footer border-top padding-y">
         <div class="container">
             <section class="footer-bottom border-top row">
@@ -199,6 +196,5 @@
             </section>
         </div><!-- //container -->
     </footer>
-    {% comment %} FOOTER SECTION END {% endcomment %}
 </body>
 </html>
