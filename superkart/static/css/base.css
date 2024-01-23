@@ -1,0 +1,26 @@
+/* ================== HELPERS  =================== */
+a:hover {
+    text-decoration: none;
+  }
+  
+  .img-wrap {
+    text-align: center;
+    display: block;
+  }
+  .img-wrap img {
+    max-width: 100%;
+  }
+  
+  .icon-wrap {
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .price-wrap {
+    letter-spacing: -0.7px;
+  }
+  
+  .content-body {
+    flex: 1 1 auto;
+    padding: 2rem 2.3rem;
+  }
