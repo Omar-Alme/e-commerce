@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'category',
+    'users',
+    
 ]
 
 MIDDLEWARE = [
@@ -68,6 +71,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'superkart.wsgi.application'
+
+AUTH_USER_MODEL = 'users.User'
 
 
 # Database
@@ -122,6 +127,11 @@ STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = [
      'superkart/static',
 ]
+
+
+# Media Folder Settings
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
