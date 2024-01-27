@@ -130,6 +130,7 @@ a:hover {
   .hover-bg:hover {
     background: #3167eb;
     background: linear-gradient(to bottom right, #3167eb, #3167eb);
+
     transition: 0.5s;
   }
   
