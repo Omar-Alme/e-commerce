@@ -42,12 +42,10 @@
                             <i class="fa fa-bars"></i>  Categories
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Sneakers</a>
-                            <a class="dropdown-item" href="#">Jackets</a>
-                            <a class="dropdown-item" href="#">Tracksuits</a>
-                            <a class="dropdown-item" href="#">Designer Bags</a>
-                            <a class="dropdown-item" href="#">Accessories</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="{% url 'products' %}">All Products </a>
+                            {% for category in links %}
+                            <a class="dropdown-item" href="{{category.get_url}}">{{ category.category_name }}</a>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
