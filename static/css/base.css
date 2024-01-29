@@ -1,3 +1,4 @@
+
 /* ================== HELPERS  =================== */
 a:hover {
     text-decoration: none;
@@ -208,4 +209,15 @@ a:hover {
     display: block;
     clear: both;
     content: "";
+  }
+
+  /* Customer review box */
+  .box {
+    padding: 18px;
+    background: #fff;
+    border-radius: 0.37rem;
+    border: 1px solid #e4e4e4;
+  }
+  .box img {
+    max-width: 100%;
   }
