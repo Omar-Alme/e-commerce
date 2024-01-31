@@ -47,6 +47,16 @@ def remove_cart_item(request, product_id):
     return redirect('cart')
 
 
+def remove_all_cart_item(request, product_id):
+    """ Remove all items from the cart """
+
+    cart = Cart.objects.get(cart_id=cart_id(request))
+    product = get_object_or_404(Product, id=product_id)
+    cart_item = CartItem.objects.get(product=product, cart=cart)
+    cart_item.delete()
+
+    return redirect('cart')
+
 
 def cart_id(request):
     """ Return the current cart id, create one if doesn't exist """
