@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+   <section class="content-section padding-y bg">
+    <div class="container">
+        <div class="row">
+            <aside class="col-lg-9">
+                <div class="card">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col" width="100">Price</th>
+                                <th scope="col" width="100">Quantity</th>
+                                <th scope="col" class="text-right" width="200"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <figure class="align-items-center">
+                                        <div class="aside"><img src="" class="img-sm"></div>
+                                        <figcaption class="info">
+                                            <a href="#" class="title text-dark">name</a>
+                                            <p class="small text-muted">Size: XL, Color: blue</p>
+                                        </figcaption>
+                                    </figure>
+                                </td>
+                                <td>
+                                    <div class="col"> 
+                                        <div class="input-group input-spinner">
+                                            <div class="input-group-prepend">
+                                            <button class="btn btn-light" type="button" id="button-plus"> <i class="fa fa-minus"></i> </button>
+                                            </div>
+                                            <input type="text" class="form-control"  value="1">
+                                            <div class="input-group-append">
+                                            <button class="btn btn-light" type="button" id="button-minus"> <i class="fa fa-plus"></i> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="price-container">
+                                        <var class="price">price</var>
+                                        <small class="text-muted">price</small>
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <a href="#" class="btn btn-outline-danger"> × Remove</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </aside>
+
+            {% comment %} Summary of order {% endcomment %}
+
+            <aside class="col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <dl class="dlist-align">
+                            <dt>Total price:</dt>
+                            <dd class="text-right">price</dd>
+                        </dl>
+                        <dl class="dlist-align">
+                            <dt>VAT:</dt>
+                            <dd class="text-right">price</dd>
+                        </dl>
+                        <dl class="dlist-align">
+                            <dt>Total:</dt>
+                            <dd class="text-right text-dark b"><strong>40</strong></dd>
+                        </dl>
+                        <hr>
+                        <p class="text-center mb-3">
+                            <img src="" height="26">
+                        </p>
+                        <a href="#" class="btn btn-primary btn-block"> Make Purchase </a>
+                        <a href="#" class="btn btn-light btn-block">Continue Shopping</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+
+                        
+
+
+{% endblock content %}
+```
