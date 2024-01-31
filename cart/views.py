@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from product.models import Product
 from .models import Cart, CartItem
 from django.core.exceptions import ObjectDoesNotExist
@@ -29,6 +29,22 @@ def cart(request, total=0, quantity=0, cart_items=None):
     }
 
     return render(request, "products/cart.html", context)
+
+
+
+def remove_cart_item(request, product_id):
+    """ Remove a single item from the cart """
+
+    cart = Cart.objects.get(cart_id=cart_id(request))
+    product = get_object_or_404(Product, id=product_id)
+    cart_item = CartItem.objects.get(product=product, cart=cart)
+    if cart_item.quantity > 1:
+        cart_item.quantity -= 1
+        cart_item.save()
+    else:
+        cart_item.delete()
+
+    return redirect('cart')
 
 
 
