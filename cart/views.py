@@ -96,17 +96,33 @@ def add_to_cart(request, product_id):
         )
         cart.save()
 
+    is_cart_item_exists = CartItem.objects.filter(product=product, cart=cart).exists()
+    if is_cart_item_exists:
+        cart_item = CartItem.objects.filter(product=product, cart=cart)
+        ex_var_list = []
+        id = []
+        for item in cart_item:
+            existing_option = item.options.all()
+            ex_var_list.append(list(existing_option))
+            id.append(item.id)
 
-    try:
-        cart_item = CartItem.objects.get(product=product, cart=cart)
-        if len(options) > 0:
-            cart_item.options.clear()
-            for item in options:
-                cart_item.options.add(item)
-            
-        cart_item.quantity += 1
-        cart_item.save()
-    except CartItem.DoesNotExist:
+        if options in ex_var_list:
+            i = ex_var_list.index(options)
+            cart_item = CartItem.objects.get(product=product, id=id[i])
+            cart_item.quantity += 1
+            cart_item.save()
+        else:
+            cart_item = CartItem.objects.create(
+                product=product,
+                quantity=1,
+                cart=cart,
+            )
+
+            if len(options) > 0:
+                cart_item.options.clear()
+                cart_item.options.add(*options)
+            cart_item.save()
+    else:
         cart_item = CartItem.objects.create(
             product=product,
             quantity=1,
@@ -114,8 +130,7 @@ def add_to_cart(request, product_id):
         )
         if len(options) > 0:
             cart_item.options.clear()
-            for item in options:
-                cart_item.options.add(item)
+            cart_item.options.add(*options)
         cart_item.save()
 
     return redirect('cart')
