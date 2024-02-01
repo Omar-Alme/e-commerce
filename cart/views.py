@@ -74,6 +74,7 @@ def add_to_cart(request, product_id):
 
     product = Product.objects.get(id=product_id)
     options = []
+
     if request.method == 'POST':
         for item in request.POST:
             key = item
@@ -82,7 +83,7 @@ def add_to_cart(request, product_id):
             try:
                 product_options = Product_options.objects.get(product=product, option_category__iexact=key, option_value__iexact=value)
                 options.append(product_options)
-                
+
             except Product_options.DoesNotExist:
                 pass
 
@@ -95,8 +96,14 @@ def add_to_cart(request, product_id):
         )
         cart.save()
 
+
     try:
         cart_item = CartItem.objects.get(product=product, cart=cart)
+        if len(options) > 0:
+            cart_item.options.clear()
+            for item in options:
+                cart_item.options.add(item)
+            
         cart_item.quantity += 1
         cart_item.save()
     except CartItem.DoesNotExist:
@@ -105,6 +112,10 @@ def add_to_cart(request, product_id):
             quantity=1,
             cart=cart,
         )
+        if len(options) > 0:
+            cart_item.options.clear()
+            for item in options:
+                cart_item.options.add(item)
         cart_item.save()
 
     return redirect('cart')
