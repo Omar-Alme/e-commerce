@@ -51,9 +51,9 @@
                 </div>
                 <a href="{% url 'products' %}" class="btn btn-outline-dark ml-auto">Shop</a>
                 <div class="col-lg col-md-6 col-sm-6 col">
-                    <form action="#" class="header-search-form">
+                    <form action="{% url 'search' %}" method="GET" class="header-search-form">
                         <div class="input-group w-100">
-                            <input type="text" class="form-control" placeholder="Search on SuperKart...." style="width:50%;">
+                            <input type="text" class="form-control" name="keyword" placeholder="Search on SuperKart...." style="width:50%;">
                             
                             <div class="input-group-append">
                                 <button class="btn btn-dark" type="submit">
@@ -73,9 +73,9 @@
                                 <a href="#" class="text-dark">Create Account</a> 
                             </div>
                         </div>
-                        <a href="./cart" class="widget-header border-left pl-3 ml-3">
+                        <a href="{% url 'cart' %}" class="widget-header border-left pl-3 ml-3">
                                 <div class="icon-wrap icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
-                                <span class="badge badge-pill badge-danger notify">0</span>
+                                <span class="badge badge-pill badge-danger notify">{{item_count}}</span>
                         </a>
                     </div>
                 </div>

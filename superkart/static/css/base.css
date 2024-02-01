@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 /* ================== HELPERS  =================== */
 a:hover {
     text-decoration: none;
@@ -98,4 +98,18 @@ a:hover {
     flex-shrink: 0;
     flex-grow: 0;
   }
+
+  .dlist-align {
+    display: flex;
+  }
+  .dlist-align dt {
+    width: 80px;
+    word-wrap: break-word;
+    font-weight: normal;
+  }
+  .dlist-align dd {
+    flex-grow: 1;
+  }
+
+  
 
