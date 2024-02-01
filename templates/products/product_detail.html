@@ -34,8 +34,8 @@
                             <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
 
                                 {% for i in single_product.product_options_set.colour  %}
-                                    <label class="btn btn-light" required>
-                                        <input type="radio" name="colour" value="{{ i.option_value }}"> {{ i.option_value }}
+                                    <label class="btn btn-light" >
+                                        <input type="radio" name="colour" value="{{ i.option_value }}" required> {{ i.option_value }}
                                     </label>
                                 {% endfor %}
                                
@@ -50,7 +50,7 @@
                                 
                                 {% for i in single_product.product_options_set.size %}        
                                 <label class="btn btn-light">
-                                    <input type="radio" name="size" value="{{ i.option_value }}"> {{ i.option_value }}
+                                    <input type="radio" name="size" value="{{ i.option_value }}" required> {{ i.option_value }}
                                 </label>
                                 {% endfor %}
                                 
