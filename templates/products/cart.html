@@ -37,7 +37,13 @@
                                         <div class="aside"><img src="{{ cart_item.product.image.url }}" class="img-sm"></div>
                                         <figcaption class="info">
                                             <a href="{{ cart_item.product.get_url }}" class="title text-dark">{{ cart_item.product.product_name }}</a>
-                                            <p class="small text-muted">Size: XL, Color: blue</p>
+                                            <p class="small text-muted">
+                                                {% if cart_item.options.all %}
+                                                    {% for option in cart_item.options.all %}
+                                                        {{ option.option_category | capfirst }}: {{ option.option_value }} <br>
+                                                    {% endfor %}
+                                                {% endif %}
+                                            </p>
                                         </figcaption>
                                     </figure>
                                 </td>
