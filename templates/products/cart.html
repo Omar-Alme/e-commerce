@@ -51,11 +51,17 @@
                                     <div class="col"> 
                                         <div class="input-group input-spinner">
                                             <div class="input-group-prepend">
-                                            <a href="{% url 'remove_cart_item' cart_item.product.id %}" class="btn btn-light" type="button" id="button-plus"> <i class="fa fa-minus"></i> </a>
+                                            <a href="{% url 'remove_cart_item' cart_item.product.id cart_item.id %}" class="btn btn-light" type="button" id="button-plus"> <i class="fa fa-minus"></i> </a>
                                             </div>
                                             <input type="text" class="form-control"  value=" {{ cart_item.quantity}} ">
                                             <div class="input-group-append">
-                                            <a href="{% url 'add_to_cart' cart_item.product.id %}" class="btn btn-light" type="button" id="button-minus"> <i class="fa fa-plus"></i> </a>
+                                            <form method="POST" action="{% url 'add_to_cart' cart_item.product.id %}">
+                                                {% csrf_token %}
+                                                {% for item in cart_item.options.all %}
+                                                    <input type="hidden" name="{{ item.option_category }}" value="{{ item.option_value }}">
+                                                {% endfor %}
+                                                    <button type="submit" class="btn btn-light" type="button" id="button-minus"> <i class="fa fa-plus"></i> </button>
+                                            </form>
                                             </div>
                                         </div>
                                     </div>
@@ -67,7 +73,7 @@
                                     </div>
                                 </td>
                                 <td class="text-right">
-                                    <a href="{% url 'remove_all_cart_item' cart_item.product.id %}" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></a>
+                                    <a href="{% url 'remove_all_cart_item' cart_item.product.id cart_item.id %}" onclick="return confirm('Are you sure you want to remove from shopping bag?')" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></a>
                                 </td>
                             </tr>
                             {% endfor %}
