@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -60,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'allauth.account.middleware.AuthenticationMiddleware',
 ]
 
 ROOT_URLCONF = 'superkart.urls'
@@ -67,7 +69,10 @@ ROOT_URLCONF = 'superkart.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'), # required for allauth
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -98,6 +103,7 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 
 WSGI_APPLICATION = 'superkart.wsgi.application'

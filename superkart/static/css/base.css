@@ -111,5 +111,56 @@ a:hover {
     flex-grow: 1;
   }
 
+  /* HOME OAGE */
+  
+  .card-product {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-product:hover {
+    transform: scale(1.05);
+}
+
+.img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* Set a fixed height for consistent sizing */
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.info-wrap {
+    padding: 1.5rem;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8B4513;
+}
+
+.btn-outline-brown {
+  color: #8B4513; /* Use a luxury brown color code */
+  border-color: #8B4513;
+}
+
+.btn-outline-brown:hover {
+  background-color: #8B4513;
+  color: #fff;
+}
+
+.price {
+  font-size: 1.1rem;
+  color: #8B4513; /* Use the luxury brown color for the price */
+}
+
+
   
 

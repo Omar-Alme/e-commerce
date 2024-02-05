@@ -2,104 +2,81 @@
 {% load static %}
 
 {% block content %}
-    <section class="section-content padding-y bg">
+<section class="section-content padding-y bg">
     <div class="container">
 
-    <div class="card">
-        <div class="row no-gutters">
-            <aside class="col-md-6">
-                <article class="gallery-wrap">
-                    <div class="img-big-wrap">
-                        <div> <a href="#"><img src="{{ single_product.image.url }}" alt="Image"></a></div>
-                    </div> 
-                </article>
-            </aside>
-
-            <main class="col-md-6 border-left">
-                <form action="{% url 'add_to_cart' single_product.id %}" method="POST">
-                    {% csrf_token %}
-                    <article class="content-body">
-                        <h2 class="title">{{ single_product.product_name }}</h2>
-
-                    <div class="mb-3"> 
-                        <var class="price h4"> ${{ single_product.price }}</var>
-                    </div>
-
-                    <p>{{ single_product.description }}</p>
-
-                    <hr>
-                    <div class="row">
-                        <div class="item-option-select">
-                            <h6>Colour</h6>
-                            <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
-
-                                {% for i in single_product.product_options_set.colour  %}
-                                    <label class="btn btn-light" >
-                                        <input type="radio" name="colour" value="{{ i.option_value }}" required> {{ i.option_value }}
-                                    </label>
-                                {% endfor %}
-                               
-                            </div>
+        <div class="card">
+            <div class="row no-gutters">
+                <aside class="col-md-6">
+                    <article class="gallery-wrap">
+                        <div class="img-big-wrap">
+                            <div> <a href="#"><img src="{{ single_product.image.url }}" alt="Image"></a></div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                         <div class="item-option-select">
-                            <h6>Size</h6>
-                            <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
-                                
-                                {% for i in single_product.product_options_set.size %}        
-                                <label class="btn btn-light">
-                                    <input type="radio" name="size" value="{{ i.option_value }}" required> {{ i.option_value }}
-                                </label>
-                                {% endfor %}
-                                
-                            </div> 
-                        </div>
-                    </div>
-                    <hr>
-                    {% if single_product.stock <= 0 %}
-                        <h4 class="text-danger">Out of stock</h4>
-                    {% else %}
-                    <button type="submit" class="btn btn-success"><i class="fa fa-shopping-cart"></i> Add to cart </button>
-                    {% endif %}
                     </article>
-                </form>
-            </main>
+                </aside>
+
+                <main class="col-md-6 border-left">
+                    <form action="{% url 'add_to_cart' single_product.id %}" method="POST">
+                        {% csrf_token %}
+                        <article class="content-body">
+                            <h2 class="title">{{ single_product.product_name }}</h2>
+
+                            <div class="mb-3">
+                                <var class="price h4"> ${{ single_product.price }}</var>
+                            </div>
+
+                            <p>{{ single_product.description }}</p>
+
+                            <hr>
+                            <div class="row">
+                                <div class="item-option-select">
+                                    <h6>Colour</h6>
+                                    <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+
+                                        {% for i in single_product.product_options_set.colour  %}
+                                        <label class="btn btn-light">
+                                            <input type="radio" name="colour" value="{{ i.option_value }}" required>
+                                            {{ i.option_value }}
+                                        </label>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="item-option-select">
+                                    <h6>Size</h6>
+                                    <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+
+                                        {% for i in single_product.product_options_set.size %}
+                                        <label class="btn btn-light">
+                                            <input type="radio" name="size" value="{{ i.option_value }}" required>
+                                            {{ i.option_value }}
+                                        </label>
+                                        {% endfor %}
+
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            {% if single_product.stock <= 0 %}
+                            <h4 class="text-danger">Out of stock</h4>
+                            {% else %}
+                            <button type="submit" class="btn btn-success"><i class="fa fa-shopping-cart"></i> Add to
+                                cart </button>
+                            {% endif %}
+                        </article>
+                    </form>
+                </main>
+            </div>
         </div>
-    </div>
 
-    <br>
-
-    {% comment %} Product review section {% endcomment %}
-
-    <div class="row">
-        <div class="col-md-9">
-
-            <header class="header-section">
-                <h3>Reviews</h3>
-            </header>
-
-            <article class="box mb-3">
-                <div class="w-100">
-                    <img src="" alt="" class="float-left img-thumbnail">
-                    <div class="text">
-                        <span class="comment-date text-muted float-md-right">2014-01-01</span>
-                        <h6 class="mt-0">jophn smosdj</h6>
-
-                    </div>
-                </div>
-                <div class="comment-body mt-3">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!</p>
-                </div>
-            </article>
-
-        </div>
-    </div>
+        <br>
 
     </div>
-    </section>
+</section>
 
-        
+
 {% endblock %}
 ```
