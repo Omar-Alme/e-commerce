@@ -1,11 +1,13 @@
 from django.contrib import messages
-from allauth.account.forms import SignupForm
 from allauth.account.views import SignupView
 from users.forms import ExtendedSignupForm
-from django import forms
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-
+@login_required
+def dashboard(request):
+    return render(request, 'users/dashboard.html')
 
 class ExtendedSignupView(SignupView):
     form_class = ExtendedSignupForm

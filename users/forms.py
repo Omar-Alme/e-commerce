@@ -3,8 +3,17 @@ from django import forms
 
 
 class ExtendedSignupForm(SignupForm):
-    first_name = forms.CharField(max_length=30, label='First Name', widget=forms.TextInput(attrs={'placeholder': 'First Name'}))
-    last_name = forms.CharField(max_length=30, label='Last Name', widget=forms.TextInput(attrs={'placeholder': 'Last Name'}))
+    first_name = forms.CharField(
+        max_length=30, 
+        label='First Name', 
+        widget=forms.TextInput(attrs={'placeholder': 'First Name'})
+        )
+    
+    last_name = forms.CharField(
+        max_length=30, 
+        label='Last Name', 
+        widget=forms.TextInput(attrs={'placeholder': 'Last Name'})
+        )
 
     def __init__(self, *args, **kwargs):
         super(ExtendedSignupForm, self).__init__(*args, **kwargs)

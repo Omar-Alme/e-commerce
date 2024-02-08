@@ -57,12 +57,21 @@
                 </div>
                 <div class="col-md-3 text-right">
                     <div class="widget-header">
+                        {% if user.is_authenticated %}
+                        <small class="title text-muted">Welcome to DRIP {{ user.first_name }}!</small>
+                        <div>
+                            <a href="{% url 'dashboard' %}" class="text-dark">Dashboard</a>
+                            <span class="dark mx-2">|</span>
+                            <a href="{% url 'account_logout' %}" class="text-dark">Logout</a>
+                        </div>
+                        {% else %}
                         <small class="title text-muted">Welcome to DRIP!</small>
                         <div>
-                            <a href="{% url 'account_login' %}" class="text-dark">Sign In</a>
+                            <a href="{% url 'account_login' %}" class="text-dark">Login</a>
                             <span class="dark mx-2">|</span>
-                            <a href="{% url 'account_signup' %}" class="text-dark">Create Account</a>
+                            <a href="{% url 'account_signup' %}" class="text-dark">Signup</a>
                         </div>
+                        {% endif %}
                     </div>
                     <a href="{% url 'cart' %}" class="widget-header border-left pl-3 ml-3">
                         <div class="icon-wrap  icon-sm rounded-circle border">
