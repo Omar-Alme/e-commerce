@@ -1,6 +1,6 @@
 # Client - Management
 
-Live Version: [Client-app](https://client-management-2b59dd79d4aa.herokuapp.com/)
+Live Version: [e-commerce]()
 
 Repository: [GitHub Repo](https://github.com/Omar-Alme/client-management-app)
 
@@ -10,7 +10,23 @@ The app is developed by [Omar Al-mehdhar](https://github.com/Omar-Alme)
 
 ## About
 
-[Client Management App](https://client-management-2b59dd79d4aa.herokuapp.com/): Welcome to Cliently, your all-in-one client management solution designed for business owners and individuals who aim to efficiently organize and keep track of their clients. Whether you run a business or want to manage your personal connections, Cliently offers a streamlined approach to client management, ensuring you never miss a beat in nurturing your valuable relationships.
+[E-commerce App](): Welcome to DripDrop - Your Ultimate Destination for Hypebeast Streetwear and Sneakers
+
+DripDrop is not just another eCommerce app; it's a haven for enthusiasts of hypebeast streetwear and sneaker culture. Here, we bring together a curated collection of the most coveted brands and exclusive releases, making it easier than ever for fashion-forward individuals to stay ahead of the game.
+
+What Sets DripDrop Apart?
+
+Curated Selection: Say goodbye to endless scrolling through mediocre options. DripDrop offers a carefully curated selection of hypebeast streetwear and sneakers, ensuring that every item you find reflects the latest trends and highest quality.
+
+Exclusive Releases: Get access to limited edition drops and collaborations from your favorite brands. At DripDrop, we pride ourselves on bringing you exclusive releases that you won't find anywhere else.
+
+Seamless Shopping Experience: Our user-friendly interface and intuitive navigation make shopping on DripDrop a breeze. Whether you're browsing for the latest sneaker release or hunting for the perfect streetwear ensemble, you'll find everything you need with just a few taps.
+
+Secure Transactions: Shop with confidence knowing that your transactions are secure. We prioritize the privacy and security of our customers, implementing robust measures to safeguard your personal information and payment details.
+
+Fast Shipping: We understand that when you find the perfect piece, you want it ASAP. That's why we offer fast and reliable shipping options to ensure that your order reaches you in no time.
+
+
 
 
 
@@ -22,8 +38,6 @@ This app is for any business owner who wants to track their clients and save the
 
 ### User Stories
 
-#### **First time Visitor Goals**
-
 | Issue ID    | User Story |
 |-------------|-------------|
 |[#1](https://github.com/Omar-Alme/client-management-app/issues/1)|As As a First Time Visitor I can understand the purpose of the website so that I can benefit from it|
@@ -31,8 +45,6 @@ This app is for any business owner who wants to track their clients and save the
 |[#3](https://github.com/Omar-Alme/client-management-app/issues/3)|As a First time visitor and Business owner whose interested in the app I can register as a user so that I can access the benefits of the app.|
 
 
-
-#### **Frequent Visior Goals**
 
 | Issue ID    | User Story |
 |-------------|-------------|
