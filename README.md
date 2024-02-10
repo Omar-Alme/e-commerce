@@ -2,11 +2,11 @@
 
 Live Version: [e-commerce]()
 
-Repository: [GitHub Repo](https://github.com/Omar-Alme/client-management-app)
+Repository: [GitHub Repo](https://github.com/Omar-Alme/e-commerce/)
 
 The app is developed by [Omar Al-mehdhar](https://github.com/Omar-Alme)
 
-![Home](documentation/features/home.png)
+![Home]()
 
 ## About
 
@@ -27,8 +27,53 @@ Secure Transactions: Shop with confidence knowing that your transactions are sec
 Fast Shipping: We understand that when you find the perfect piece, you want it ASAP. That's why we offer fast and reliable shipping options to ensure that your order reaches you in no time.
 
 
+### User Stories
 
-## User Experience 
+| Issue ID    | User Story |
+|-------------|-------------|
+|[#1](https://github.com/Omar-Alme/e-commerce/issues/1)|
+As a User I want to be able to View a list of Products so that I can select some to purchase.|
+|[#2](https://github.com/Omar-Alme/e-commerce/issues/2)|As a User I want to be able to View individual product details so that I can identify the price,description, rating, product image and available sizes.|
+|[#3](https://github.com/Omar-Alme/e-commerce/issues/3)|As a User I want to be able to quickly identify deals and special offers so that I can Take advantage of special savings on products I'd like to purchase.|
+|[#4](https://github.com/Omar-Alme/e-commerce/issues/4)|As a User I want to be able to View the total price of my purchases at anytime so that I can track and avoid spending too much.|
+|[#5](https://github.com/Omar-Alme/e-commerce/issues/5)|
+As a Frequent User I want to be able to Easily register for an account so that I can Have a personal account to view my profile.|
+|[#6](https://github.com/Omar-Alme/e-commerce/issues/6)|As a Registered User I want to be able to Easily login or logout so that I can access my personal account information.|
+|[#7](https://github.com/Omar-Alme/e-commerce/issues/7)|
+As a RegisteredUser I want to be able to Easily recover my password incase i forget it so that I can Recover my account|
+|[#8](https://github.com/Omar-Alme/e-commerce/issues/8)|As a Registered User I want to be able to Recieve an email confirmation after registering so that I can verify the success of my account registration.|
+|[#9](https://github.com/Omar-Alme/e-commerce/issues/9)|As a Registered User I want to be able to Have a personalised user profile so that I can View my personal order history and order confirmations, and save payment information|
+|[#10](https://github.com/Omar-Alme/e-commerce/issues/10)|As a Visitor I want to be able to Sort the list of available products so that I can easily identify the best rated, best priced and categorically sorted products|
+|[#11](https://github.com/Omar-Alme/e-commerce/issues/11)|As a Visitor I want to be able to Sort a specific category of product so that I can Find the best priced and categorically sorted products|
+|[#12](https://github.com/Omar-Alme/e-commerce/issues/12)|As a Visitor I want to be able to search for a product by name or description So that I can Find a specific product I want to purchase|
+|[#13](https://github.com/Omar-Alme/e-commerce/issues/13)|As a Visitor I want to be able to Easily see what I've searched for and the number of results So that I can quickly decide wether the product I want is available|
+|[#14](https://github.com/Omar-Alme/e-commerce/issues/14)|As a Store owner I want to be able to Add a product so that I can Add new items to my store|
+|[#15](https://github.com/Omar-Alme/e-commerce/issues/15)|
+As a Store owner I want to be able to Delete a product so that I can Remove items that are no longer for sale|
+|[#16](https://github.com/Omar-Alme/e-commerce/issues/16)|As a Store owner I want to be able to Edit and update a product so that I can Change product prices, desc, images and other product criterias|
+|[#17](https://github.com/Omar-Alme/e-commerce/issues/17)|As a Shopper I want to be able to View items in my shopping bag so that I can See the total cost for my purchases and all the items im purchasing|
+|[#18](https://github.com/Omar-Alme/e-commerce/issues/18)|As a Shopper I want to be able to easily select the size and quanitity of a product when purchasing it so that I can Ensure i dont accidentally select the wrong product quantity or size|
+|[#19](https://github.com/Omar-Alme/e-commerce/issues/19)|As a Shopper I want to be able to Adjust the quantity of individual items so that I can Easily make changes to my purchase before checkout|
+|[#20](https://github.com/Omar-Alme/e-commerce/issues/20)|As a Shopper I want to be able to Easily input payment information so that I can Check out quickly|
+|[#21](https://github.com/Omar-Alme/e-commerce/issues/21)|As a Shopper I want to be able to Feel secure and safe about payment and personal info so that I can confidently provide the needed information for purchase|
+|[#22](https://github.com/Omar-Alme/e-commerce/issues/22)|
+As a Shopper I want to be able to View my order confirmation after checkout so that i can Verify that i dint make any mistakes|
+|[#23](https://github.com/Omar-Alme/e-commerce/issues/23)|As a Shopper I want to be able to receive an email confirmation for my purchase after checking out so that i can Keep the confirmation of what i've purchased for my records|
+|[#24](https://github.com/Omar-Alme/e-commerce/issues/24)|
+As a Shopper. I want to be able to how many products are available in the store, so that I can see that there is a variety.|
+|[#25](https://github.com/Omar-Alme/e-commerce/issues/25)|As a shopper. I want to be able to see if an item is out of stock, so that I can Know easily not to waste time looking for it or trying to buy it.|
+|[#26](https://github.com/Omar-Alme/e-commerce/issues/26)|
+As a Shopper. I want to be able to add items to cart, so that I can purchase later when I'm ready.|
+|[#27](https://github.com/Omar-Alme/e-commerce/issues/27)|
+As a Shopper. I want to be able to remove items from the cart, so that I can make a purchase when I change my mind last second about a product.|
+|[#28](https://github.com/Omar-Alme/e-commerce/issues/28)|
+As a Shopper. I want to be able to go through pages easily to see more products, so that I can I can decide what I want without struggling to find it.|
+
+
+## Business Model 
+
+DripDrop operates on a Business-to-Consumer (B2C) model, directly connecting with fashion-forward individuals and sneaker enthusiasts. Through our e-commerce platform, we offer a seamless shopping experience, curated selections, and popular Recommendations, ensuring that each customer finds the perfect addition to their wardrobe.
+
 
 ### Target Audience
 
@@ -38,35 +83,43 @@ Sneakerheads: Passionate collectors and enthusiasts on the hunt for exclusive an
 
 Streetwear Connoisseurs: Urban trendsetters with a keen eye for unique and edgy streetwear pieces that reflect their personal style and attitude.
 
-### User Stories
 
-| Issue ID    | User Story |
-|-------------|-------------|
-|[#1](https://github.com/Omar-Alme/client-management-app/issues/1)|As As a First Time Visitor I can understand the purpose of the website so that I can benefit from it|
-|[#2](https://github.com/Omar-Alme/client-management-app/issues/2)|As a First time Visitor I can easily navigate around the website so that I can see the websites content|
-|[#3](https://github.com/Omar-Alme/client-management-app/issues/3)|As a First time visitor and Business owner whose interested in the app I can register as a user so that I can access the benefits of the app.|
+## Web Marketing 
+Web Marketing Strategy:
+
+DripDrop leverages a comprehensive web marketing strategy to engage with our audience across various platforms and channels:
+
+Social Media Presence: We maintain active profiles on Instagram, TikTok, and Facebook, where we showcase our latest products, share style inspiration, and interact with our community. Follow us for exclusive sneak peeks, behind-the-scenes content, and exciting giveaways.
+
+### Tiktok Page
 
 
+### Facebook Page
 
-| Issue ID    | User Story |
-|-------------|-------------|
-|[#4](https://github.com/Omar-Alme/client-management-app/issues/4)|As a Returning user and business owner I can log in to my account so that I can access the app.|
-|[#5](https://github.com/Omar-Alme/client-management-app/issues/5)|As a Frequent user I can recover my account in case i forget my password so that I can access my account again.|
-|[#6](https://github.com/Omar-Alme/client-management-app/issues/6)|As a Registered user I can see my account and navigate through the pages so that I can use the benefits of the app|
-|[#7](https://github.com/Omar-Alme/client-management-app/issues/7)|As a Registered User I can Edit my account profile was logged in so that I can have my own unique personal profile holding my details|
-|[#8](https://github.com/Omar-Alme/client-management-app/issues/8)|As a Registered User I can change the standard profile image and add my own so that I can have my own profile|
-|[#9](https://github.com/Omar-Alme/client-management-app/issues/9)|As a Registered user I can update my profile whenever I can so that I can be up to date with my details|
-|[#10](https://github.com/Omar-Alme/client-management-app/issues/10)|As a Registered User I can add a client so that I can keep track of the clients that work for me|
-|[#11](https://github.com/Omar-Alme/client-management-app/issues/11)|As a Registered User I can Input client details so that Have an insight of the client Im working with.|
-|[#12](https://github.com/Omar-Alme/client-management-app/issues/12)|As a Registered User I can Upload a profile picture of the client or their company when I input their details so that see who im working with clearly|
-|[#13](https://github.com/Omar-Alme/client-management-app/issues/13)|As a Registered User I can View the added client on my summary in a card summary so that I can keep track of certain details of the client|
-|[#14](https://github.com/Omar-Alme/client-management-app/issues/14)|As a Registered User I can Update/Edit my client card details so that i can stay up to date with my clients|
-|[#15](https://github.com/Omar-Alme/client-management-app/issues/15)|As a Registered User I can View my updated client card in the dashboard so that Stay on track with my client and stay up to date|
-|[#16](https://github.com/Omar-Alme/client-management-app/issues/16)|As a Registed User I can click on the summarised client card to view a more detailed card so that I can see more details of my client such as online presense and their business description|
-|[#17](https://github.com/Omar-Alme/client-management-app/issues/17)|As a Registered User I can Delete the client so that I can remove clients that I no longer work with|
-|[#18](https://github.com/Omar-Alme/client-management-app/issues/18)|As a Registered User I can see the new dashboard when i delete a client so that I can stay up to date with my present clients|
-|[#19](https://github.com/Omar-Alme/client-management-app/issues/19)|As a Registered User I can add a limited amount of clients so that Stay focused as a business owner and keep track of them|
-|[#20](https://github.com/Omar-Alme/client-management-app/issues/20)|As a Registered User I can view all my client cards on my dashboard so that I can see everyone clearlly with the important detail summaries|
+
+### Instagram Page
+
+
+Newsletter Subscription: Stay in the loop with our newsletter, delivering curated content, special promotions, and insider updates directly to your inbox. Subscribe to receive exclusive offers, early access to sales, and the latest news from DripDrop.
+
+By strategically leveraging these channels, we aim to foster meaningful connections with our audience, drive brand awareness, and cultivate a loyal customer base. Join us on social media, subscribe to our newsletter, and become part of the DripDrop community today!
+
+## Future Development
+
+#### Live Chat support
+Enhancing customer service, we're implementing live chat support powered by AI, providing instant assistance and resolving queries efficiently, ensuring a seamless shopping experience for our users.
+
+#### Ratings and Reviews
+Adding a ratings and reviews feature allows customers to share feedback and experiences, empowering the community and helping users make informed purchasing decisions based on authentic user opinions.
+
+#### Additional Payment systems (Paypal, Wechat, Alipay, Klarna)
+Expanding payment options, we're integrating Klarna, PayPal, and Alipay, offering users flexibility and convenience in their payment methods, enhancing accessibility and trust in the checkout process.
+
+#### Order Cancelation
+Introducing an order cancellation feature, users can easily cancel orders within a specified timeframe, providing flexibility and peace of mind, while streamlining the order management process for both users and administrators.
+
+#### Wishlist
+Enabling users to create wishlists allows them to save desired items for future purchase, enhancing user engagement and facilitating repeat purchases, while providing valuable insights into customer preferences for targeted marketing efforts.
 
 
 ## Technologies Used
@@ -108,46 +161,42 @@ Streetwear Connoisseurs: Urban trendsetters with a keen eye for unique and edgy 
     + [JShint](https://jshint.com/): validator used to validate JS code for the website
     + [PEP8](https://pep8.org/): validator used to validate python code for the website
     + [Whitenoise](https://whitenoise.readthedocs.io/en/latest/): pip package to serve static files so they can deploy anywhere
-   
+    + [stripe](https://stripe.com/): was used to create the payment system.
+    + [Sitemap Generator](https://www.xml-sitemaps.com/) was used to create the sitemap.xml file.
+    + [Django-extensions](https://django-extensions.readthedocs.io/en/latest/) was used to create a Entity-Relationship Diagram.
+    + [Canva](https://stripe.com/): was used to create the banners, logo and some images.
+
+
 
 
 ## FEATURES
 
 Please refer to the [FEATURES.md](FEATURES.md) file for all features of the application.
 
-## Design 
+
+## UX/UI
+
+### Design 
 
 TThe application's design adheres to the principles of Material Design, emphasizing simplicity in user interaction. The primary focus is on ease of use, achieved through the intentional design of components to be user-friendly. By adopting a minimalistic approach, the goal was to create a meaningful and purposeful design without unnecessary distractions. Given the multifunctional nature of the application and its numerous components, the strategic use of white spaces was employed to enhance the overall user experience, contributing to a more visually pleasing and intuitive interface.
 
 ### Colour Scheme
 
-![Color Schema](documentation/design/color_pallete.png)
-
-In this application, a thoughtfully curated color scheme has been implemented to enhance the user experience. The choice of shades of black for the navigation bar and footer creates a sleek and professional appearance, ensuring optimal readability and visual appeal in these areas.
-
-The white background at the center of the page serves a dual purpose. Firstly, it provides a clean and uncluttered canvas, placing the main content in focus. Secondly, it contributes to a modern and minimalist aesthetic, promoting a sense of simplicity and ease of use for the end user.
-
-Shades of purple have been carefully integrated into buttons and subtext, adding a touch of vibrancy and highlighting key interactive elements. This not only aids in drawing attention to important features but also introduces a visually engaging element to the overall design.
-
-In essence, the chosen color scheme aims to strike a balance between professionalism, user-friendly aesthetics, and a touch of vibrancy for an enriched visual experience.
+![Color Schema]()
 
 
 ### Typography
 
 The font used throughout the application is Archivo.
 
-![Typography](documentation/design/font.jpeg)
+![Typography]()
 
 ARCHIVO was chosen for its modern and clean design, aligning with the application's focus on simplicity and user-friendly aesthetics. Its versatility and readability enhance the overall visual appeal, contributing to a cohesive and contemporary design language.
 
 
 ### Wireframes
 
- - ![Home page](documentation/wireframes/New%20Wireframe%201.png)
- - ![Sign Up Page](documentation/wireframes/New%20Wireframe%202%20(1).png)
- - ![Sign in page](documentation/wireframes/New%20Wireframe%202.png)
- - ![Dashboard empty](documentation/wireframes/New%20Wireframe%203.png)
- - ![Dashboard Filled](documentation/wireframes/New%20Wireframe%204.png)
+ - 
 
  These were the wireframes aimed for. However alot of the designs and features were changed or altered. The look was similar but there are features that were not accomplished due to lack of time. These will be added in the future. 
  
@@ -155,7 +204,7 @@ ARCHIVO was chosen for its modern and clean design, aligning with the applicatio
 
 ### Flowchart
 
-![Simple Flowchart](documentation/wireframes/flowchart.png)
+![Simple Flowchart]()
 
 This is a simple flowchart used. The flowcharts were created using [LucidChart](https://www.lucidchart.com/).
 
@@ -167,60 +216,93 @@ In the project's initial phases, the database was established utilizing SQLite f
 
 ### Entity-Relationship Diagram
 
- +----------------+         +-----------------+
- |      User      |         |      Client     |
- +----------------+         +-----------------+
- | PK: id         |    +--->| PK: id          |
- | username       |    |    | FK: user_id     |
- | password       |    |    | client_name     |
- | email          |    |    | industry        |
- +----------------+    |    | email (unique)  |
-                       |    | bio             |
-                       |    | online_presence |
-                       |    +-----------------+
-                       |
- +----------------+    |
- |      Owner     |    |
- +----------------+    |
- | PK: id         |    |
- | FK: user_id    |    |
- | first_name     |    |
- | last_name      |    |
- | business_name  |    |
- | email (unique) |    |
- | bio            |    |
- | website        |    |
- +----------------+    |
+
 
 ### Data models
 
-#### Client Model
-+---------+--------------+---------------+------------------+-------+------------------+
-| Field   | Type         | Blank         | Null             | Unique| Default          |
-+---------+--------------+---------------+------------------+-------+------------------+
-| id      | Primary Key  | Not Blank     | Not Null         |       |                  |
-| user_id | Foreign Key  | Blank         | Not Null         |       |                  |
-| client_name | CharField | Blank         | Blank            |       |                  |
-| industry| CharField    | Blank         | Blank            |       |                  |
-| email   | EmailField   | Blank         | Blank, Unique    | Yes   |                  |
-| bio     | TextField    | Blank         | Blank            |       | No bio yet       |
-| online_presence | URLField | Blank      | Blank            |       |                  |
-+---------+--------------+---------------+------------------+-------+------------------+
+#### User Model
 
-#### Owner/User Model
+| Field          | Type          | Description                        |
+|----------------|---------------|------------------------------------|
+| id             | Integer       | Primary key                        |
+| first_name     | CharField     | First name of the user             |
+| last_name      | CharField     | Last name of the user              |
+| username       | CharField     | Unique username of the user        |
+| email          | EmailField    | Unique email address of the user   |
+| phone_number   | CharField     | Phone number of the user           |
+| date_joined    | DateTimeField | Date and time when user joined     |
+| last_login     | DateTimeField | Date and time of last login        |
+| is_admin       | BooleanField  | Flag indicating if user is admin   |
+| is_staff       | BooleanField  | Flag indicating if user is staff   |
+| is_active      | BooleanField  | Flag indicating if user is active  |
+| is_superuser   | BooleanField  | Flag indicating if user is superuser |
 
-+-----------+--------------+---------------+------------------+-------+------------------+
-| Field     | Type         | Blank         | Null             | Unique| Default          |
-+-----------+--------------+---------------+------------------+-------+------------------+
-| id        | Primary Key  | Not Blank     | Not Null         |       |                  |
-| user_id   | Foreign Key  | Blank         | Not Null         |       |                  |
-| first_name| CharField    | Blank         | Blank            |       |                  |
-| last_name | CharField    | Blank         | Blank            |       |                  |
-| business_name | CharField| Blank         | Blank, Unique    | Yes   |                  |
-| email     | EmailField   | Blank         | Blank, Unique    | Yes   |                  |
-| bio       | TextField    | Blank         | Blank            |       | No bio yet       |
-| website   | URLField     | Blank         | Blank            |       |                  |
-+-----------+--------------+---------------+------------------+-------+------------------+
+#### Category Model
+
+| Field          | Type          | Description                        |
+|----------------|---------------|------------------------------------|
+| id             | Integer       | Primary key                        |
+| category_name  | CharField     | Name of the category               |
+| slug           | SlugField     | Slug for SEO-friendly URLs         |
+| description    | TextField     | Description of the category        |
+| image          | ImageField    | Image for the category             |
+
+
+#### Cart Model
+
+Item in Cart:
+
+| Field          | Type          | Description                        |
+|----------------|---------------|------------------------------------|
+| id             | Integer       | Primary key                        |
+| user_id        | ForeignKey    | ID of the user who owns the cart  |
+| product_id     | ForeignKey    | ID of the product in the cart     |
+| cart_id        | ForeignKey    | ID of the cart                    |
+| quantity       | Integer       | Quantity of the product in the cart |
+| is_active      | BooleanField  | Flag indicating if item is active |
+
+
+Cart ID:
+
+| Field          | Type          | Description                        |
+|----------------|---------------|------------------------------------|
+| cart_id        | CharField     | Cart ID                            |
+| date_added     | DateField     | Date when cart was added           |
+
+
+
+#### Products Model
+
+Product:
+
+| Field          | Type          | Description                        |
+|----------------|---------------|------------------------------------|
+| id             | Integer       | Primary key                        |
+| product_name   | CharField     | Name of the product                |
+| slug           | SlugField     | Slug for SEO-friendly URLs         |
+| description    | TextField     | Description of the product         |
+| price          | DecimalField  | Price of the product               |
+| image          | ImageField    | Image for the product              |
+| stock          | Integer       | Stock availability of the product  |
+| is_available   | BooleanField  | Flag indicating if product is available |
+| category_id    | ForeignKey    | ID of the category                 |
+| created_date   | DateTimeField | Date and time when product was created |
+| modified_date  | DateTimeField | Date and time when product was last modified |
+
+
+Product Options:
+
+| Field          | Type          | Description                        |
+|----------------|---------------|------------------------------------|
+| id             | Integer       | Primary key                        |
+| product_id     | ForeignKey    | ID of the product                  |
+| option_category| CharField     | Category of the option (e.g., color, size) |
+| option_value   | CharField     | Value of the option                |
+| is_active      | BooleanField  | Flag indicating if option is active |
+| created_date   | DateTimeField | Date and time when option was created |
+
+
+
 
 ## Testing 
 
@@ -228,144 +310,7 @@ Please refer back to [TESTING.md](TESTING.md) file for all test-related document
 
 ## Deployment 
 
- - The app was deployed to [Heroku](https://client-management-2b59dd79d4aa.herokuapp.com/)
- - The database was deployed to [ElephantSQL](https://www.elephantsql.com/).
-
-### Local Deployment
-In order to make a local copy of this project, you can clone it.
-In your IDE Terminal, type the following command to clone my repository:
-
--      git clone https://github.com/Omar-Alme/client-management-app
-
-*Note:*
-  - This project requires to install all the requirements:
-  - Open the terminal window and type:
-  - `pip3 install -r requirements.txt`
-
-1. Install the dependencies:
-
-    - Open the terminal window and type:
-    - `pip3 install -r requirements.txt`
-
-
-2. Create a `.gitignore` file in the root directory of the project where you should add env.py and __pycache__ files to prevent the privacy of your secret data.
-
-3. Create a `.env` file. This will contain the following environment variables:
-
-    ```python
-    import os
-
-      os.environ['SECRET_KEY'] = 'Add a secret key'
-      os.environ['DATABASE_URL'] = 'will be used to connect to the database'
-      os.environ['DEBUG'] = 'True'
-    ```
-
-    *During the development stage DEBUG is set to True, but it is vital to change it to False.*
-
-4. Run the following commands in a terminal to make migrations: 
-    - `python3 manage.py makemigrations`
-    - `python3 manage.py migrate`
-5. Create a superuser to get access to the admin environment.
-    - `python3 manage.py createsuperuser`
-    - Enter the required information (your username, email and password).
-6. Run the app with the following command in the terminal:
-    - `python3 manage.py runserver`
-7. Open the link provided in a browser to see the app.
-
-8. If you need to access the admin page:
-    - Add /admin/ to the link provided.
-    - Enter your username and password (for the superuser that you have created before).
-    - You will be redirected to the admin page.
-
-
-### ElephantSQl Database Deployment
-
-1. Go to [ElephantSQL](https://www.elephantsql.com/) and create a new account.
-
-2. Create a new instance of the database.
-
-3. Select a name for your database and select the free plan.
-
-4. Click "Select Region"
-
-5. Select a region close to you.
-
-6. Click "Review"
-
-7. Click "Create Instance"
-
-8. Click on the name of your database to open the dashboard.
-
-9. You will see the dashboard of your database. You will need the URL of your database to connect it to your Django project.
-
-### Heroku Deployment
-
-* Set up a local workspace on your computer for Heroku:
-    - Create a list of requirements that the project needs to run:
-      - type this in the terminal: `pip3 freeze > requirements.txt`
-    - Commit and push the changes to GitHub
-    
-* Go to [www.heroku.com](www.heroku.com) 
-* Log in or create a Heroku account.
-* Create a new app with any unique name <name app>.
-
-
-* Create a Procfile in your local workplace:
-
-    
-    This file will will contain the following:
-    ```python
-        web: gunicorn <name app>.wsgi:application
-    ```
-    - Commit and push the changes to GitHub.
-
-
-* Go to the settings app in Heroku and go to Config Vars.
-
-
-Click on Reveal Config Vars and add the following config variables:
-
-| Key      | Value          |
-|-------------|-------------|
-| DATABASE_URL | ... | 
-| DISABLE_COLLECTSTATIC | 1 |
-| SECRET_KEY | ... |
-| PORT | ... |
-| DEBUG | ... |
-
-* Copy the value of DATABASE_URL and input it into the .env file and generate a secret key (you may use [Djecrety](https://djecrety.ir/) for secret key generation).
-* Create EMAIL_HOST_PASS and EMAIL_HOST_USER with a gmail account and add values to these keys.
-* Migrate changes.
-* Set debug to False in settings.py
-* Commit and push the changes to GitHub.
-* Connect your repository to Heroku.
-
-  
-
-* Deploy the app to Heroku by clicking "Deploy Branch" button. If you want to enable auto-deployment, click "Enable Automatic Deployment".
-
-
-The deployment process will start.
-
-Click "View build logs" to see the progress of the deployment.
-
-
-*Due to security updates, Heroku dashboard will not allow you to deploy your app from GitHub. Thus, you need to run the following commands in your terminal:*
-
-| action | terminal command | comment |
-| ------ | ---------------- | ------- |
-| login to your heroku account | `heroku login -i` | |
-| create a new app on heroku | `heroku create NAME-OF-YOUR-APP` | if you haven't created the app before, and then, you can access the app via the Heroku dashboard and set up your config vars.|
-| add remote to your local repository | `heroku git:remote -a NAME-OF-YOUR-APP` | if you have already created app on Heroku (before the security updates) and connected it using Heroku dashboard |
-| deploy new version of the app | `git push heroku main` | |
-| rename app | `git remote rename NAME-OF-YOUR-APP NAME-OF-YOUR-APP-2` | |
-
-**Final Deployment**
-
-* Set debug to False locally + delete DISABLE_COLLECTSTATIC from config vars in Heroku dashboard.
-* Commit and push the changes to GitHub.
-
-
+Please refer back to [DEPLOYMENT.md](DEPLOYMENT.md) file for all test-related documentation.
 
 ## Credits
  - Credits to all the softwares and tools used. Refer to the tools section of the README file.
@@ -375,6 +320,11 @@ Click "View build logs" to see the progress of the deployment.
  - [Programming with Mosh](https://www.youtube.com/watch?v=rHux0gMZ3Eg&t=895s): For helping understand django python a little more.
  - [FreeCodeCamp](https://www.youtube.com/watch?v=t10QcFx7d5k&t=3144s): for user authentication help.
  - [Dennis Ivy](https://www.youtube.com/watch?v=EX6Tt-ZW0so&t=985s): For Crud functionality help.
+ - [Very Academy Youtube Channel](https://www.youtube.com/c/veryacademy): for brilliant tutorials, which shed the light on the implementation of database with multi-values products, precise explanations of the stripe API.
+ - [Rinak Nandanwar](https://www.youtube.com/watch?v=GxeS46hhUsM&list=PLckF35yRVp3PYUSIvcm-zmrI9KwLb0yPo&index=17): For he's E commerce django playlist which helped me in many ways.
+ - [CodingEntrepreneaurs Youtube](https://www.youtube.com/watch?v=qx9nshX9CQQ): Detailed Micro E commerce tutotial for some of the functionalities.
+
+
 
 ## Acknowledgments
 
