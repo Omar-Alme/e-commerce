@@ -28,13 +28,15 @@ Fast Shipping: We understand that when you find the perfect piece, you want it A
 
 
 
-
-
 ## User Experience 
 
 ### Target Audience
 
-This app is for any business owner who wants to track their clients and save their most important information in one location.
+Fashion-forward Enthusiasts: Trend-conscious individuals seeking the latest hypebeast streetwear and sneaker releases to elevate their style game.
+
+Sneakerheads: Passionate collectors and enthusiasts on the hunt for exclusive and limited edition sneakers to add to their collections.
+
+Streetwear Connoisseurs: Urban trendsetters with a keen eye for unique and edgy streetwear pieces that reflect their personal style and attitude.
 
 ### User Stories
 
