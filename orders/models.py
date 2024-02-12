@@ -54,6 +54,11 @@ class Order(models.Model):
     class Meta:
         ordering = ['-created_at']
 
+    def address(self):
+        return f'{self.address1} {self.address2}'
+        
+
+
     def __str__(self):
         return self.user.first_name
     

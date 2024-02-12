@@ -8,6 +8,12 @@ from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
+
+def payments(request):
+    """ A view to return the payments page """
+    return render(request, 'orders/payments.html')
+
+
 @login_required
 def checkout_securely(request, total=0, quantity=0, cart_items=None):
     """ A view to return the checkout securely page """
@@ -56,7 +62,18 @@ def checkout_securely(request, total=0, quantity=0, cart_items=None):
             data.order_number = order_number
             data.save()
 
-            return redirect('checkout')
+            order = Order.objects.get(user=user, is_ordered=False, order_number=order_number)
+
+            context = {
+                'order': order,
+                'cart_items': cart_items,
+                'total': total,
+                'grand_total': grand_total,
+                'tax': tax,
+
+            }
+
+            return render(request, 'orders/payments.html', context)
         
     else:
         form = OrderForm()
@@ -73,3 +90,5 @@ def checkout_securely(request, total=0, quantity=0, cart_items=None):
     return redirect('checkout')
 
     # return render(request, 'checkout.html', context)
+
+
