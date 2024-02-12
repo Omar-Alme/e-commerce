@@ -1,32 +1,37 @@
 from django.shortcuts import render, redirect
-from cart.models import CartItem
+from cart.models import CartItem, Cart
+from cart.views import cart_id
 from .forms import OrderForm
 from .models import Order
 import datetime
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
+@login_required
 def checkout_securely(request, total=0, quantity=0, cart_items=None):
     """ A view to return the checkout securely page """
-    user = request.user
-    grand_total = 0
-    tax = 0
-    for cart_item in cart_items:
-            total += (cart_item.product.price * cart_item.quantity)
-            quantity += cart_item.quantity
-
-    tax = (2 * total) / 100
-    grand_total = total + tax
     
-
+    user = request.user
     cart_items = CartItem.objects.filter(user=user)
-    cart_items_count = cart_items.count()
-    if cart_items_count <= 0:
-        return redirect('products')
+    
+    tax = 0
+    grand_total = 0
+    cart = Cart.objects.get(cart_id=cart_id(request))
+    cart_items = CartItem.objects.filter(cart=cart, is_active=True)
+    
+    for cart_item in cart_items:
+        total += (cart_item.product.price * cart_item.quantity)
+        quantity += cart_item.quantity
+
+        tax = (2 * total) / 100
+        grand_total = total + tax
     
     if request.method == 'POST':
         form = OrderForm(request.POST)
         if form.is_valid():
             data = Order()
+            data.user = user
             data.first_name = form.cleaned_data['first_name']
             data.last_name = form.cleaned_data['last_name']
             data.phone = form.cleaned_data['phone']
@@ -54,11 +59,17 @@ def checkout_securely(request, total=0, quantity=0, cart_items=None):
             return redirect('checkout')
         
     else:
+        form = OrderForm()
 
-        return redirect('checkout')
+    context = {
+        'total': total,
+        'quantity': quantity,
+        'cart_items': cart_items,
+        'grand_total': grand_total,
+        'tax': tax,
+        'form': form,
+    }
 
+    return redirect('checkout')
 
-
-
-
-    return render(request, 'orders/checkout_securely.html')
+    # return render(request, 'checkout.html', context)
