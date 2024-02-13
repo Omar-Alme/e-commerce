@@ -64,7 +64,7 @@ class Order(models.Model):
     
 
 class OrderItem(models.Model):
-    """A model to store order items"""
+    """A model to store users completed orders"""
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     payment = models.ForeignKey(Payment, on_delete=models.SET_NULL, blank=True, 
                                 null=True)

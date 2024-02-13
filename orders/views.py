@@ -1,18 +1,18 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from cart.models import CartItem, Cart
 from cart.views import cart_id
 from .forms import OrderForm
 from .models import Order
-import datetime
+from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
+import decimal
+import datetime
+import stripe
 
 
 # Create your views here.
-
-def payments(request):
-    """ A view to return the payments page """
-    return render(request, 'orders/payments.html')
-
+stripe.api_key = settings.STRIPE_SECRET_KEY
 
 @login_required
 def checkout_securely(request, total=0, quantity=0, cart_items=None):
@@ -89,6 +89,55 @@ def checkout_securely(request, total=0, quantity=0, cart_items=None):
 
     return redirect('checkout')
 
-    # return render(request, 'checkout.html', context)
 
 
+@csrf_exempt
+def payments(request,):
+    """ A view to return the stripe payments page """
+    stripe.api_key = settings.STRIPE_SECRET_KEY
+    if request.method == 'POST':
+
+        
+        user = request.user
+        cart = Cart.objects.get(cart_id=cart_id(request))
+        cart_items = CartItem.objects.filter(cart=cart, is_active=True)
+
+
+        line_items = []
+        for cart_item in cart_items:
+            
+            price_with_tax = cart_item.product.price * (1 + decimal.Decimal('0.02'))  # Include tax (2% in this example)
+            unit_amount = int(price_with_tax * 100)
+
+            line_items.append({
+                'price_data': {
+                    'currency': 'usd',
+                    'unit_amount':unit_amount ,
+                    'product_data': {
+                        'images': [request.build_absolute_uri(cart_item.product.image)],
+                        'name': cart_item.product.product_name,
+                    },
+                },
+                'quantity': cart_item.quantity,
+            })            
+
+        checkout_session = stripe.checkout.Session.create(
+            payment_method_types=['card'],
+            line_items=line_items,
+            mode='payment',
+            success_url=request.build_absolute_uri(reverse('success')),
+            cancel_url=request.build_absolute_uri(reverse('cancel')),
+        )
+        return redirect(checkout_session.url, code=303)
+        
+    return render(request, 'orders/payments.html')
+
+
+def success(request):
+    """ A view to return the success page """
+
+    return render(request, 'orders/success.html')
+
+def cancel(request):
+
+    return render(request, 'orders/cancel.html')

@@ -29,10 +29,27 @@
 
 
     {% block extra_css %}
+    <style>
+        .message-container {
+            position: fixed;
+            top: 72px;
+            right: 15px;
+            z-index: 99999999999;
+        }
+
+        .custom-toast {
+            overflow: visible;
+        }
+
+        .toast {
+            position: relative;
+            z-index: 99999999999;
+        }
+        
+        
+    </style>
     {% endblock%}
 
-    {% block extra_js %}
-    {% endblock%}
 
 </head>
 
@@ -41,15 +58,34 @@
     <!-- Navbar -->
     {% include 'includes/navbar.html' %}
 
+    {% if messages %}
 
+    <div class="message-container">
+        {% for message in messages %}
+            {% include 'includes/messages/messages_success.html' %}
+            {% include 'includes/messages/messages_error.html' %}
+        {% endfor %}
+    </div>
+    
+    {% endif %} 
 
     {% block content %}
-    
-    {% include 'includes/messages.html' %}
-
 
     <!-- Content -->
     {% endblock %}
 
     <!-- Footer -->
     {% include 'includes/footer.html' %}
+
+
+{% block extra_js %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.toast').toast('show');
+    });
+</script>
+{% endblock %}
+</body>
+
+</html>
+```

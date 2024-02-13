@@ -1,31 +1,67 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<style>
+    .stripe-button {
+        background-color: #6772e5;
+        color: #fff;
+        border: 0;
+        border-radius: 4px;
+        padding: 12px 16px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        display: block;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+    }
+
+    .stripe-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .stripe-button .icon {
+    margin-left: 5px;
+    position: relative;
+    top: 3px;
+}
+
+
+</style>
+{% endblock extra_css %}
+
+
 {% block content %}
 
 <section class="content-section padding-y bg">
     <div class="container">
 
-            <h4 class="text-center">Review Your Order</h4>
+        <h4 class="text-center">Review Your Order</h4>
         <div class="row">
             <aside class="col-lg-8">
                 <div class="card">
                     <h5 class="card-header">Checkout Details</h5>
                     <div class="card-body">
-                    <p class="card-text mb-0">{{order.first_name}} {{order.last_name}}</p>
-                    <p class="card-text mb-0">{{order.email}} </p>
-                    <p class="card-text mb-0">{{order.phone}} </p>
-                    <p class="card-text mb-0">{{order.address}} </p>
-                    <p class="card-text mb-0">{{order.city}}, {{order.zipcode}} </p>
-                    <p class="card-text mb-0">{{order.country}} </p>
-                    <p class="card-text mb-0">{{order.state}} </p>
+                        <p class="card-text mb-0">{{order.first_name}} {{order.last_name}}</p>
+                        <p class="card-text mb-0">{{order.email}} </p>
+                        <p class="card-text mb-0">{{order.phone}} </p>
+                        <p class="card-text mb-0">{{order.address}} </p>
+                        <p class="card-text mb-0">{{order.city}}, {{order.zipcode}} </p>
+                        <p class="card-text mb-0">{{order.country}} </p>
+                        <p class="card-text mb-0">{{order.state}} </p>
                     </div>
                 </div>
 
                 <div class="card">
                     <h5 class="card-header">Payment Method</h5>
                     <div class="card-body">
-                    <p class="card-text">Stripe</p>
+                        <p class="card-text">Stripe</p>
                     </div>
                 </div>
 
@@ -55,7 +91,8 @@
                                                 <p class="small text-muted">
                                                     {% if cart_item.options.all %}
                                                     {% for option in cart_item.options.all %}
-                                                    {{ option.option_category | capfirst }}: {{ option.option_value }}
+                                                    {{ option.option_category | capfirst }}:
+                                                    {{ option.option_value }}
                                                     <br>
                                                     {% endfor %}
                                                     {% endif %}
@@ -83,8 +120,8 @@
             </aside>
 
             {% comment %} Summary of order {% endcomment %}
-
             <aside class="col-lg-4">
+
                 <div class="card">
                     <div class="card-body">
                         <dl class="dlist-align">
@@ -101,19 +138,72 @@
                         </dl>
                         <hr>
                         <p class="text-center mb-3">
-                            <img src="" height="26">
+
+                            <i class="fab fa-cc-visa fa-lg text-muted" style="font-size: 30px;"></i>
+                            <i class="fab fa-cc-stripe fa-lg text-muted" style="font-size: 30px;"></i>
+                            <i class="fab fa-cc-mastercard fa-lg text-muted" style="font-size: 30px;"></i>
+
                         </p>
-                        <a href="{% url 'checkout' %}" class="btn btn-dark btn-block"> Complete Payment </a>
+                        <form action="{% url 'payments' %}" method="POST" id="stripe-checkout">
+                            {% csrf_token %}
+
+
+                            <button type="submit" id="checkout-button" class="btn btn-block stripe-button">
+                                Pay with <i class="fa-brands fa-cc-stripe icon" style="font-size: 25px;"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
+
             </aside>
         </div>
-            
+
     </div>
 </section>
 
 
-                        
+
 
 {% endblock content %}
-```
+
+
+{% block extra_js %}
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    // Set your publishable key
+    var stripe = Stripe('{{ STRIPE_PUBLIC_KEY }}');
+
+    // Handle form submission
+    var form = document.getElementById('stripe-checkout-form');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Create a checkout session when the form is submitted
+        fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                }
+            })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (session) {
+                // Redirect to the Stripe Checkout Session
+                return stripe.redirectToCheckout({
+                    sessionId: session.id
+                });
+            })
+            .then(function (result) {
+                // If `redirectToCheckout` fails, display an error message to the customer
+                if (result.error) {
+                    alert(result.error.message);
+                }
+            })
+            .catch(function (error) {
+                console.error('Error:', error);
+            });
+    });
+</script>
+{% endblock extra_js %}
