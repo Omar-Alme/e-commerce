@@ -36,68 +36,41 @@
     </div>
     <div class="container">
         <div class="row">
-            <aside class="col-md-3">
-                <!--   SIDEBAR   -->
-                <ul class="list-group sidebar">
-                    <a class="list-group-item active" href="#" aria-label="View your order history"> View your order
-                        history </a>
-                    <a class="list-group-item" href="#" aria-label="View transactions"> View transactions </a>
-                    <a class="list-group-item" href="#" aria-label="Return and refunds"> Return and refunds </a>
-                    <a class="list-group-item" href="#" aria-label="Account settings"> Account settings </a>
-                    <a class="list-group-item" href="#" aria-label="View received orders"> View received orders </a>
-                </ul>
-                <br>
-                <a class="btn btn-dark btn-block" href="#" aria-label="Log out"> <i class="fa fa-power-off"></i> <span
-                        class="text">Log out</span> </a>
-            </aside>
+            
+            {% include 'includes/dashboard_list.html' %}
 
             <main class="col-md-9">
                 <article class="card">
                     <header class="card-header card-header-custom">
-                        <strong class="d-inline-block mr-3">Order ID: </strong>
-                        <span>Order Date: </span>
+                        <strong class="d-inline-block mr-3">Logged in as: {{user.full_name}} </strong>    
                     </header>
                     <div class="card-body card-body-custom">
                         <div class="row">
-                            <div class="col-md-8">
-                                <h6 class="text-muted">Delivery details</h6>
-                                <p>John Doe <br>
-                                    Phone: +1234567890 <br>
-                                    Email: john.doe@example.com <br>
-                                    Address: 123 Street, City, Country <br>
-                                    Zip Code: 100123
-                                </p>
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">My Total Orders</h5>
+                                        <p class="card-text">You have placed a total of {{order_count}} orders.</p>
+                                        <a href="#" class="btn btn-primary">View Order History</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-4">
-                                <h6 class="text-muted">Payment details</h6>
-                                <span class="text-success">
-                                    <i class="fab fa-lg fa-cc-visa"></i>
-                                    Visa ending in 4216
-                                </span>
-                                <p>Subtotal: $356 <br>
-                                    Shipping fee: $56 <br>
-                                    <span class="b">Total: $456 </span>
-                                </p>
+
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="{{ userprofile.profile_picture.url }}" width="50" height="50" class="img-fluid mb-1" alt="Profile image" style="border-radius:50%;">
+                                        <p class="mb-0">{{user.email}}</p>
+                                    </div>
+                                </div>
                             </div>
+
+
+                            
+                            
                         </div>
                     </div>
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <tr>
-                                <td width="65">
-                                    <img src="../images/items/1.jpg" class="img-xs border">
-                                </td>
-                                <td>
-                                    <p class="title mb-0">Product A </p>
-                                    <var class="price text-muted">USD 145</var>
-                                </td>
-                                <td> Seller <br> Store ABC </td>
-                                <td width="250"> <a href="#" class="btn btn-outline-primary"
-                                        aria-label="Track order">Track order</a> <a href="#" class="btn btn-light"
-                                        aria-label="View details"> View details </a> </td>
-                            </tr>   
-                        </table>
-                    </div> 
                 </article> 
             </main>
         </div> 

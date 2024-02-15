@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+
+{% block extra_css %}
+<style>
+    .bg {
+        background-color: #f8f9fa;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .sidebar {
+        background-color: #ffffff;
+    }
+
+    .card-header-custom {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .card-body-custom {
+        background-color: #ffffff;
+    }
+</style>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<section class="section-content bg">
+    <div class="text-center">
+        <h1>My dashboard</h1>
+        <p>Welcome to your dashboard, {{ user.first_name }}!</p>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            {% include 'includes/dashboard_list.html' %}
+
+            <main class="col-md-9">
+                <article class="card">
+                    <header class="card-header card-header-custom">
+                        <strong class="d-inline-block mr-3">My Order History </strong>
+                    </header>
+                    <div class="card-body card-body-custom">
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Order Number</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Phone</th>
+                                            <th scope="col">Order Total</th>
+                                            <th scope="col">Order Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for order in orders %}
+                                        <tr>
+                                            <th scope="row">{{ order.order_number }}</th>
+                                            <td>{{ order.full_name }}</td>
+                                            <td>{{ order.phone }}</td>
+                                            <td>${{ order.order_total }}</td>
+                                            <td>{{ order.created_at }}</td>
+                                        </tr>
+                                        {% endfor %}
+                            
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+
+
+</section>
+
+
+{% endblock %}
