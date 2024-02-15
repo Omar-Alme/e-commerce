@@ -1,13 +1,75 @@
 {% extends "account/base.html" %}
+{% load static %}
+
 
 {% load i18n %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
+{% block extra_css %}
+<style>
+
+.account {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.account-paragraph {
+  text-align: center;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup input[type="text"],
+.signup input[type="email"],
+.signup input[type="password"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup button:hover {
+  background-color: #0056b3;
+}
+
+</style>
+
+{% endblock %}
+
 {% block content %}
+
+<div class="container account mb-5">
 <h1>{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<p class="account-paragraph">
+  {% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">Login</a>.{% endblocktrans %}
+</p>
 
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
@@ -15,7 +77,8 @@
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+  <button class="btn btn-dark" type="submit">{% trans "Sign Up" %} &raquo;</button>
 </form>
+</div>
 
 {% endblock %}
