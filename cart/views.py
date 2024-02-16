@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from product.models import Product, Product_options
 from .models import Cart, CartItem
 from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 # Create your views here.
 def cart(request, total=0, quantity=0, cart_items=None):
@@ -49,6 +51,8 @@ def remove_cart_item(request, product_id, cart_item_id):
     except CartItem.DoesNotExist:
         pass
 
+    messages.error(request, "Product removed from the cart!")
+
     return redirect('cart')
 
 
@@ -59,6 +63,8 @@ def remove_all_cart_item(request, product_id, cart_item_id):
     product = get_object_or_404(Product, id=product_id)
     cart_item = CartItem.objects.get(product=product, cart=cart, id=cart_item_id)
     cart_item.delete()
+
+    messages.error(request, "All Product removed from the cart!")
 
     return redirect('cart')
 
@@ -97,6 +103,7 @@ def add_to_cart(request, product_id):
         )
         cart.save()
 
+
     is_cart_item_exists = CartItem.objects.filter(product=product, cart=cart).exists()
     if is_cart_item_exists:
         cart_item = CartItem.objects.filter(product=product, cart=cart)
@@ -134,9 +141,12 @@ def add_to_cart(request, product_id):
             cart_item.options.add(*options)
         cart_item.save()
 
+    messages.success(request, "Product added to the cart successfully")
+
     return redirect('cart')
 
 
+@login_required
 def checkout(request, total=0, quantity=0, cart_items=None):
     """ A view to return the checkout page """
 

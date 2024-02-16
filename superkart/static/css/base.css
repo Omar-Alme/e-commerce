@@ -1,154 +1,198 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
-/* ================== HELPERS  =================== */
-a:hover {
-    text-decoration: none;
-  }
-  
-  .img-wrap {
-    text-align: center;
-    display: block;
-  }
-  .img-wrap img {
-    max-width: 100%;
-  }
-  
-  .icon-wrap {
-    text-align: center;
-    display: inline-block;
-  }
-  
-  .price-wrap {
-    letter-spacing: -0.7px;
-  }
-  
-  .content-body {
-    flex: 1 1 auto;
-    padding: 2rem 2.3rem;
-  }
 
-
-  /* Customer review */
-  .box {
-    padding: 18px;
-    background: #fff;
-    border-radius: 0.37rem;
-    border: 1px solid #e4e4e4;
-  }
-  .box img {
-    max-width: 100%;
-  }
-
-  .section-heading {
-    margin-bottom: 20px;
-    margin-top: 10px;
-  }
-
-  .gallery-wrap .img-big-wrap {
-    margin-bottom: 10px;
-  border-radius: 0.37rem;
-  overflow: hidden;
-  background-color: #fff;
-  }
-
-  .gallery-wrap .img-big-wrap img {
-    height: 450px;
-    width: auto;
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .gallery-wrap .img-big-wrap a {
-    text-align: center;
-    display: block;
-  }
-
-  /* CART PAGE */
-  .cart-items{
-    position: relative;
-    display: flex;
-    width: 100%;
-  }
-
-  .cart-items .aside{
-    position: relative;
-    flex-shrink: 0;
-  }
-
-  .cart-items .info{
-    padding-right: 7px;
-    padding-left: 14px;
-  }
-
-  .cart-items .title {
-    display: block;
-    margin-bottom: 5px;
-    color: #212529;
-  }
-  .cart-items a.title:hover {
-    color: #3167eb;
-  }
-
-  .img-sm{
-    width: 80px;
-    height: 80px;
-    border-radius: 0.37rem;
-    overflow: hidden;
-    background-color: #fff;
-    -o-object-fit: cover;
-    object-fit: cover;
-    flex-shrink: 0;
-    flex-grow: 0;
-  }
-
-  .dlist-align {
-    display: flex;
-  }
-  .dlist-align dt {
-    width: 80px;
-    word-wrap: break-word;
-    font-weight: normal;
-  }
-  .dlist-align dd {
-    flex-grow: 1;
-  }
-
-  /* HOME OAGE */
-  
-  .card-product {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+/* ================== GLOBAL  =================== */
+html {
+  height: 100%;
+  box-sizing: border-box;
 }
 
-.card-product:hover {
-    transform: scale(1.05);
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-sizing: inherit;
+}
+
+.message-container {
+  position: fixed;
+  top: 72px;
+  right: 15px;
+  z-index: 99999999999;
+}
+
+.custom-toast {
+  overflow: visible;
+}
+
+.toast {
+  position: relative;
+  z-index: 99999999999;
+}
+
+.content-wrapper {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ================== HELPERS  =================== */
+a:hover {
+  text-decoration: none;
 }
 
 .img-wrap {
-    position: relative;
-    overflow: hidden;
-    height: 200px; /* Set a fixed height for consistent sizing */
+  text-align: center;
+  display: block;
+}
+
+.img-wrap img {
+  max-width: 100%;
+}
+
+.icon-wrap {
+  text-align: center;
+  display: inline-block;
+}
+
+.price-wrap {
+  letter-spacing: -0.7px;
+}
+
+.content-body {
+  flex: 1 1 auto;
+  padding: 2rem 2.3rem;
+}
+
+/* Customer review */
+.box {
+  padding: 18px;
+  background: #fff;
+  border-radius: 0.37rem;
+  border: 1px solid #e4e4e4;
+}
+
+.box img {
+  max-width: 100%;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.gallery-wrap .img-big-wrap {
+  margin-bottom: 10px;
+  border-radius: 0.37rem;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.gallery-wrap .img-big-wrap img {
+  height: 450px;
+  width: auto;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery-wrap .img-big-wrap a {
+  text-align: center;
+  display: block;
+}
+
+/* CART PAGE */
+.cart-items {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.cart-items .aside {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.cart-items .info {
+  padding-right: 7px;
+  padding-left: 14px;
+}
+
+.cart-items .title {
+  display: block;
+  margin-bottom: 5px;
+  color: #212529;
+}
+
+.cart-items a.title:hover {
+  color: #3167eb;
+}
+
+.img-sm {
+  width: 80px;
+  height: 80px;
+  border-radius: 0.37rem;
+  overflow: hidden;
+  background-color: #fff;
+  -o-object-fit: cover;
+  object-fit: cover;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.dlist-align {
+  display: flex;
+}
+
+.dlist-align dt {
+  width: 80px;
+  word-wrap: break-word;
+  font-weight: normal;
+}
+
+.dlist-align dd {
+  flex-grow: 1;
+}
+
+/* HOME OAGE */
+
+.card-product {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-product:hover {
+  transform: scale(1.05);
+}
+
+.img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
 }
 
 .product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Maintain aspect ratio */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .info-wrap {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 .title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #8B4513;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #8B4513;
 }
 
 .btn-outline-brown {
-  color: #8B4513; /* Use a luxury brown color code */
+  color: #8B4513;
   border-color: #8B4513;
 }
 
@@ -159,9 +203,268 @@ a:hover {
 
 .price {
   font-size: 1.1rem;
-  color: #8B4513; /* Use the luxury brown color for the price */
+  color: #8B4513;
+}
+
+/* ================== Dashboard  =================== */
+.bg {
+  background-color: #f8f9fa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.sidebar {
+  background-color: #ffffff;
+}
+
+.card-header-custom {
+  background-color: #212529;
+  color: #fff;
+}
+
+.card-body-custom {
+  background-color: #ffffff;
+}
+
+.list-group-item.active {
+  background-color: #212529;
+  color: white;
+  text-decoration: none;
+}
+
+.list-group-item {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  border: none;
+}
+
+.sidebar {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #dee2e6;
+}
+
+/* ================== PRODUCT DETAIL PAGE THUMBNAILS  =================== */
+ul.main-image-thumbnail {
+  margin: 0 auto;
+  padding: 0;
+  float: left;
+}
+
+ul.main-image-thumbnail li {
+  list-style: none;
+  margin: 10px;
+}
+
+ul.main-image-thumbnail li img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+}
+
+/* ================== ALLAUTH  =================== */
+.account {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.account-paragraph {
+  text-align: center;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+.login input[type="text"],
+.login input[type="email"],
+.login input[type="password"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login button:hover {
+  background-color: #0056b3;
 }
 
 
-  
+.sign_out {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
 
+.sign_out button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.sign_out button:hover {
+  background-color: darkred;
+}
+
+.password_change {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.account {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.account-paragraph {
+  text-align: center;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup input[type="text"],
+.signup input[type="email"],
+.signup input[type="password"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup button:hover {
+  background-color: #0056b3;
+}
+
+.password_reset {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.password_reset input[type="email"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.password_reset input[type="submit"] {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.password_reset input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.account {
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+/* ================== CHECKOUT  =================== */
+.stripe-button {
+  background-color: #6772e5;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+
+.stripe-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.stripe-button .icon {
+  margin-left: 5px;
+  position: relative;
+  top: 3px;
+}
+
+/* ================== Media Queries  =================== */
+@media (max-width: 768px) {
+  .img-wrap {
+    max-width: 100%;
+    height: 400px;
+  }
+}

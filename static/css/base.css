@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
 /* ================== HELPERS  =================== */
 a:hover {
     text-decoration: none;
@@ -26,192 +26,8 @@ a:hover {
     padding: 2rem 2.3rem;
   }
 
-  /* =================  DEFINED VARIABLES =================== */
-.icon-xs, .icon-sm, .icon-md, .icon-lg {
-    display: inline-block;
-    text-align: center;
-    flex-shrink: 0;
-    flex-grow: 0;
-  }
-  
-  .icon-xs {
-    width: 32px;
-    height: 32px;
-    line-height: 32px !important;
-    font-size: 16px;
-  }
-  
-  .icon-sm {
-    width: 48px;
-    height: 48px;
-    line-height: 48px !important;
-    font-size: 20px;
-  }
-  
-  .icon-md {
-    width: 60px;
-    height: 60px;
-    line-height: 60px !important;
-    font-size: 28px;
-  }
-  
-  .icon-lg {
-    width: 96px;
-    height: 96px;
-    line-height: 96px !important;
-    font-size: 42px;
-  }
-  
-  .img-xs, .img-sm, .img-md, .img-lg {
-    -o-object-fit: cover;
-       object-fit: cover;
-    flex-shrink: 0;
-    flex-grow: 0;
-  }
-  
-  .img-xs {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .img-sm {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .img-md {
-    width: 140px;
-    height: 140px;
-  }
-  
-  .img-lg {
-    width: 250px;
-    height: 250px;
-  }
-  
-  .center-xy {
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-  }
-  
-  .center-y {
-    top: 50%;
-    position: absolute;
-    transform: translateY(-50%);
-  }
-  
-  .center-x {
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
-  }
-  
-  .vh-100 {
-    height: 100vh;
-  }
-  
-  .overflow-h {
-    overflow: hidden;
-  }
-  
-  .flip-h {
-    transform: scaleX(-1);
-  }
-  
-  .opacity {
-    opacity: 0.5;
-  }
-  
-  [class*=hover-] {
-    transition: 0.5s;
-  }
-  
-  .hover-bg:hover {
-    background: #3167eb;
-    background: linear-gradient(to bottom right, #3167eb, #3167eb);
 
-    transition: 0.5s;
-  }
-  
-  .hover-zoom:hover {
-    transition: 0.5s;
-    transform: scaleX(1);
-  }
-  
-  /* ============== spacing ============== */
-  .padding-y {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  
-  .padding-top {
-    padding-top: 40px;
-  }
-  
-  .padding-bottom {
-    padding-bottom: 40px;
-  }
-  
-  .padding-y-lg {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  
-  .padding-top-lg {
-    padding-top: 80px;
-  }
-  
-  .padding-bottom-lg {
-    padding-bottom: 80px;
-  }
-  
-  .padding-y-sm {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  
-  .padding-top-sm {
-    padding-top: 20px;
-  }
-  
-  .padding-bottom-sm {
-    padding-bottom: 20px;
-  }
-  
-  .relative {
-    position: relative;
-  }
-  
-  .absolute {
-    position: absolute;
-  }
-  
-  var {
-    font-style: normal;
-  }
-  
-  figure {
-    margin-bottom: 0;
-  }
-  
-  .form-noborder input, .form-noborder select, .form-noborder .btn {
-    border: 0;
-  }
-  .form-noborder select.form-control-lg:not([size]):not([multiple]) {
-    height: 2.875rem;
-  }
-  
-  /* all clearfix */
-  article:after,
-  .form-group:after {
-    display: block;
-    clear: both;
-    content: "";
-  }
-
-  /* Customer review box */
+  /* Customer review */
   .box {
     padding: 18px;
     background: #fff;
@@ -221,3 +37,317 @@ a:hover {
   .box img {
     max-width: 100%;
   }
+
+  .section-heading {
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .gallery-wrap .img-big-wrap {
+    margin-bottom: 10px;
+  border-radius: 0.37rem;
+  overflow: hidden;
+  background-color: #fff;
+  }
+
+  .gallery-wrap .img-big-wrap img {
+    height: 450px;
+    width: auto;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .gallery-wrap .img-big-wrap a {
+    text-align: center;
+    display: block;
+  }
+
+  /* CART PAGE */
+  .cart-items{
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+
+  .cart-items .aside{
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .cart-items .info{
+    padding-right: 7px;
+    padding-left: 14px;
+  }
+
+  .cart-items .title {
+    display: block;
+    margin-bottom: 5px;
+    color: #212529;
+  }
+  .cart-items a.title:hover {
+    color: #3167eb;
+  }
+
+  .img-sm{
+    width: 80px;
+    height: 80px;
+    border-radius: 0.37rem;
+    overflow: hidden;
+    background-color: #fff;
+    -o-object-fit: cover;
+    object-fit: cover;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  .dlist-align {
+    display: flex;
+  }
+  .dlist-align dt {
+    width: 80px;
+    word-wrap: break-word;
+    font-weight: normal;
+  }
+  .dlist-align dd {
+    flex-grow: 1;
+  }
+
+  /* HOME OAGE */
+  
+  .card-product {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-product:hover {
+    transform: scale(1.05);
+}
+
+.img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 200px; 
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.info-wrap {
+    padding: 1.5rem;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8B4513;
+}
+
+.btn-outline-brown {
+  color: #8B4513; 
+  border-color: #8B4513;
+}
+
+.btn-outline-brown:hover {
+  background-color: #8B4513;
+  color: #fff;
+}
+
+.price {
+  font-size: 1.1rem;
+  color: #8B4513; 
+}
+
+
+/* ================== PRODUCT DETAIL PAGE THUMBNAILS  =================== */
+ul.main-image-thumbnail {
+  margin: 0 auto;
+  padding: 0;
+  float: left;
+}
+
+ul.main-image-thumbnail li {
+  list-style: none;
+  margin: 10px;
+}
+
+ul.main-image-thumbnail li img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+}
+
+
+
+
+/* ================== ALLAUTH  =================== */
+.account {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.account-paragraph {
+  text-align: center;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+.login input[type="text"],
+.login input[type="email"],
+.login input[type="password"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login button:hover {
+  background-color: #0056b3;
+}
+
+
+.sign_out {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.sign_out button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.sign_out button:hover {
+  background-color: darkred;
+}
+
+.password_change {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.account {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.account-paragraph {
+  text-align: center;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup input[type="text"],
+.signup input[type="email"],
+.signup input[type="password"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup button:hover {
+  background-color: #0056b3;
+}
+
+.password_reset {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.password_reset input[type="email"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.password_reset input[type="submit"] {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.password_reset input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.account {
+  margin-bottom: 100px;
+  margin-top: 100px;
+}

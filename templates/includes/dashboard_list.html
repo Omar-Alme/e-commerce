@@ -1,0 +1,13 @@
+<aside class="col-md-3">
+    <ul class="list-group sidebar">
+        <a class="list-group-item {% if '/users/dashboard/' == request.path  %}active{% endif %}"
+            href="{% url 'dashboard' %}" aria-label="dashboard"> Dashboard </a>
+        <a class="list-group-item {% if '/users/order_history/' == request.path  %}active{% endif %}"
+            href="{% url 'order_history' %}" aria-label="View transactions"> Order History </a>
+        <a class="list-group-item {% if '/users/edit_profile/' == request.path  %}active{% endif %}"
+            href="{% url 'edit_profile' %}" aria-label="account settings"> Account Settings </a>
+    </ul>
+    <br>
+    <a class="btn btn-outline-danger btn-block" href="#" aria-label="Log out"> <i class="fa fa-power-off"></i> <span
+            class="text">Log out</span> </a>
+</aside>

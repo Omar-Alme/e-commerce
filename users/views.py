@@ -14,7 +14,7 @@ def dashboard(request):
 
     orders = Order.objects.order_by('-created_at').filter(user=request.user, is_ordered=True)
     order_count = orders.count()
-
+    
     userprofile = UserProfile.objects.get(user=request.user)
 
     context = {

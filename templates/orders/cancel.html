@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block extra_title %}Order Cancelled{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card p-5">
+        <h2 class="text-center mb-4">Order Cancelled</h2>
+        <p class="text-center mb-4">Sorry to see you change your mind.</p>
+        <a href="{% url 'home' %}" class="btn btn-dark btn-block">Back to Home</a>
+    </div>
+</div>
+{% endblock %}
+
+

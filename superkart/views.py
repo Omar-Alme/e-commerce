@@ -1,12 +1,17 @@
 from django.shortcuts import render
 from product.models import Product
+import random
 
 
 def home(request):
-    products = Product.objects.all().filter(is_available=True).order_by('created_date')	
+    """View for the home page showing popular products."""
+    products = Product.objects.filter(is_available=True).order_by('-price')[:6]
+
+    random_products = random.sample(list(products), min(len(products), 6))
+
 
     context = {
-        'products': products,
+        'products': random_products,
     }
 
     return render(request, "home.html", context)

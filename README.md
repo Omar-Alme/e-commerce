@@ -36,11 +36,9 @@ As a User I want to be able to View a list of Products so that I can select some
 |[#2](https://github.com/Omar-Alme/e-commerce/issues/2)|As a User I want to be able to View individual product details so that I can identify the price,description, rating, product image and available sizes.|
 |[#3](https://github.com/Omar-Alme/e-commerce/issues/3)|As a User I want to be able to quickly identify deals and special offers so that I can Take advantage of special savings on products I'd like to purchase.|
 |[#4](https://github.com/Omar-Alme/e-commerce/issues/4)|As a User I want to be able to View the total price of my purchases at anytime so that I can track and avoid spending too much.|
-|[#5](https://github.com/Omar-Alme/e-commerce/issues/5)|
-As a Frequent User I want to be able to Easily register for an account so that I can Have a personal account to view my profile.|
+|[#5](https://github.com/Omar-Alme/e-commerce/issues/5)|As a Frequent User I want to be able to Easily register for an account so that I can Have a personal account to view my profile.|
 |[#6](https://github.com/Omar-Alme/e-commerce/issues/6)|As a Registered User I want to be able to Easily login or logout so that I can access my personal account information.|
-|[#7](https://github.com/Omar-Alme/e-commerce/issues/7)|
-As a RegisteredUser I want to be able to Easily recover my password incase i forget it so that I can Recover my account|
+|[#7](https://github.com/Omar-Alme/e-commerce/issues/7)|As a RegisteredUser I want to be able to Easily recover my password incase i forget it so that I can Recover my account|
 |[#8](https://github.com/Omar-Alme/e-commerce/issues/8)|As a Registered User I want to be able to Recieve an email confirmation after registering so that I can verify the success of my account registration.|
 |[#9](https://github.com/Omar-Alme/e-commerce/issues/9)|As a Registered User I want to be able to Have a personalised user profile so that I can View my personal order history and order confirmations, and save payment information|
 |[#10](https://github.com/Omar-Alme/e-commerce/issues/10)|As a Visitor I want to be able to Sort the list of available products so that I can easily identify the best rated, best priced and categorically sorted products|
@@ -48,26 +46,20 @@ As a RegisteredUser I want to be able to Easily recover my password incase i for
 |[#12](https://github.com/Omar-Alme/e-commerce/issues/12)|As a Visitor I want to be able to search for a product by name or description So that I can Find a specific product I want to purchase|
 |[#13](https://github.com/Omar-Alme/e-commerce/issues/13)|As a Visitor I want to be able to Easily see what I've searched for and the number of results So that I can quickly decide wether the product I want is available|
 |[#14](https://github.com/Omar-Alme/e-commerce/issues/14)|As a Store owner I want to be able to Add a product so that I can Add new items to my store|
-|[#15](https://github.com/Omar-Alme/e-commerce/issues/15)|
-As a Store owner I want to be able to Delete a product so that I can Remove items that are no longer for sale|
+|[#15](https://github.com/Omar-Alme/e-commerce/issues/15)|As a Store owner I want to be able to Delete a product so that I can Remove items that are no longer for sale|
 |[#16](https://github.com/Omar-Alme/e-commerce/issues/16)|As a Store owner I want to be able to Edit and update a product so that I can Change product prices, desc, images and other product criterias|
 |[#17](https://github.com/Omar-Alme/e-commerce/issues/17)|As a Shopper I want to be able to View items in my shopping bag so that I can See the total cost for my purchases and all the items im purchasing|
 |[#18](https://github.com/Omar-Alme/e-commerce/issues/18)|As a Shopper I want to be able to easily select the size and quanitity of a product when purchasing it so that I can Ensure i dont accidentally select the wrong product quantity or size|
 |[#19](https://github.com/Omar-Alme/e-commerce/issues/19)|As a Shopper I want to be able to Adjust the quantity of individual items so that I can Easily make changes to my purchase before checkout|
 |[#20](https://github.com/Omar-Alme/e-commerce/issues/20)|As a Shopper I want to be able to Easily input payment information so that I can Check out quickly|
 |[#21](https://github.com/Omar-Alme/e-commerce/issues/21)|As a Shopper I want to be able to Feel secure and safe about payment and personal info so that I can confidently provide the needed information for purchase|
-|[#22](https://github.com/Omar-Alme/e-commerce/issues/22)|
-As a Shopper I want to be able to View my order confirmation after checkout so that i can Verify that i dint make any mistakes|
+|[#22](https://github.com/Omar-Alme/e-commerce/issues/22)|As a Shopper I want to be able to View my order confirmation after checkout so that i can Verify that i dint make any mistakes|
 |[#23](https://github.com/Omar-Alme/e-commerce/issues/23)|As a Shopper I want to be able to receive an email confirmation for my purchase after checking out so that i can Keep the confirmation of what i've purchased for my records|
-|[#24](https://github.com/Omar-Alme/e-commerce/issues/24)|
-As a Shopper. I want to be able to how many products are available in the store, so that I can see that there is a variety.|
+|[#24](https://github.com/Omar-Alme/e-commerce/issues/24)|As a Shopper. I want to be able to how many products are available in the store, so that I can see that there is a variety.|
 |[#25](https://github.com/Omar-Alme/e-commerce/issues/25)|As a shopper. I want to be able to see if an item is out of stock, so that I can Know easily not to waste time looking for it or trying to buy it.|
-|[#26](https://github.com/Omar-Alme/e-commerce/issues/26)|
-As a Shopper. I want to be able to add items to cart, so that I can purchase later when I'm ready.|
-|[#27](https://github.com/Omar-Alme/e-commerce/issues/27)|
-As a Shopper. I want to be able to remove items from the cart, so that I can make a purchase when I change my mind last second about a product.|
-|[#28](https://github.com/Omar-Alme/e-commerce/issues/28)|
-As a Shopper. I want to be able to go through pages easily to see more products, so that I can I can decide what I want without struggling to find it.|
+|[#26](https://github.com/Omar-Alme/e-commerce/issues/26)|As a Shopper. I want to be able to add items to cart, so that I can purchase later when I'm ready.|
+|[#27](https://github.com/Omar-Alme/e-commerce/issues/27)|As a Shopper. I want to be able to remove items from the cart, so that I can make a purchase when I change my mind last second about a product.|
+|[#28](https://github.com/Omar-Alme/e-commerce/issues/28)|As a Shopper. I want to be able to go through pages easily to see more products, so that I can I can decide what I want without struggling to find it.|
 
 
 ## Business Model 
@@ -300,7 +292,6 @@ Product Options:
 | option_value   | CharField     | Value of the option                |
 | is_active      | BooleanField  | Flag indicating if option is active |
 | created_date   | DateTimeField | Date and time when option was created |
-
 
 
 

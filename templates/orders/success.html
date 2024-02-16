@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Order Confirmation{% endblock %}
+
+{% block content %}
+<section class="section-content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4">Thank You for Shopping with Us!</h2>
+                        <p>Your order has been successfully placed. Here is your receipt:</p>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <p><strong>Order Number:</strong> {{ order.order_number }}</p>
+                                <p><strong>Date:</strong> {{ order.created_at }}</p>
+                                <p><strong>Total Amount:</strong> ${{ payment.amount_paid }}</p>
+                                <p><strong>Payment Method:</strong> {{ payment.payment_method }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Shipping Details:</strong></p>
+                                <p class="card-text mb-0">{{order.fullname}}</p>
+                                <p class="card-text mb-0">{{order.email}} </p>
+                                <p class="card-text mb-0">{{order.phone}} </p>
+                                <p class="card-text mb-0">{{order.address}} </p>
+                                <p class="card-text mb-0">{{order.city}}, {{order.zipcode}} </p>
+                                <p class="card-text mb-0">{{order.country}} </p>
+                                <p class="card-text mb-0">{{order.state}} </p>
+                            </div>
+                        </div>
+                        <h4>Items Purchased:</h4>
+                        <ul class="list-group">
+                            {% for item in cart_items %}
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-md-6">{{ item.product.name }}</div>
+                                    <div class="col-md-3">{{ item.quantity }} x ${{ item.product.price }}</div>
+                                    <div class="col-md-3 text-right">${{ item.get_total }}</div>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <p class="text-right"><strong>Total:</strong> ${{ payment.amount_paid }}</p>
+                        <hr>
+                        <p>We appreciate your business. If you have any questions or concerns, feel free to <a href="">contact us</a>.</p>
+                        <p>Happy shopping!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Email Confirmation Section -->
+<section class="section-content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4">Order Confirmation Email Sent</h2>
+                        <p>An order confirmation email has been sent to {{ order.email }}.</p>
+                        <p>If you don't see the email in your inbox, please check your spam folder.</p>
+                        <p>Thank you for shopping with us!</p>
+                        <a href="{% url 'home' %}" class="btn btn-dark btn-block">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+

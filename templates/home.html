@@ -1,24 +1,25 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_title %}Home{% endblock %}
+
 {% block content %}
 
 <!-- Main Section -->
 <section class="main-section padding-y-sm">
-    <div class="container">
+    <div class="container mb-5">
         <div class="main-banner-wrap">
             <img src="{% static './images/banners/2.png' %}" alt="banner" class="img-fluid rounded">
         </div>
     </div>
 </section>
-
 <!-- Product Section -->
 <section class="section-name padding-y-sm bg">
-    <div class="container">
+    <div class="container mb-5">
 
         <header class="section-heading">
-            <a href="{% url 'products' %}" class="btn btn-outline-primary float-right">See all</a>
-            <h3 class="section-title">Popular products</h3>
+            <a href="{% url 'products' %}" class="btn btn-outline-dark float-right">Discover More</a>
+            <h3 class="section-title">Newest Arrivals</h3>
         </header>
 
         <div class="row">
@@ -37,7 +38,7 @@
             {% endfor %}
         </div>
 
-    </div><!-- container // -->
+    </div>
 </section>
 
 

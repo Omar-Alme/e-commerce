@@ -2,14 +2,16 @@ from django.shortcuts import render, redirect, reverse
 from cart.models import CartItem, Cart
 from cart.views import cart_id
 from .forms import OrderForm
+from product.models import Product
 from .models import Order, OrderItem, Payment
 from users.models import User
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
-from django.http import JsonResponse, HttpResponse
+from django.http import HttpResponse
 from django.core.mail import send_mail
-from django.db import transaction
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 import decimal
 import datetime
 import stripe
@@ -70,6 +72,7 @@ def checkout_securely(request, total=0, quantity=0, cart_items=None):
 
             order = Order.objects.get(user=user, is_ordered=False, order_number=order_number)
 
+            
             context = {
                 'order': order,
                 'cart_items': cart_items,
@@ -120,12 +123,12 @@ def payments(request,):
                     'currency': 'usd',
                     'unit_amount':unit_amount ,
                     'product_data': {
-                        'images': [request.build_absolute_uri(cart_item.product.image)],
                         'name': cart_item.product.product_name,
                     },
                 },
                 'quantity': cart_item.quantity,
             })  
+
 
         checkout_session = stripe.checkout.Session.create(
             customer_email = user.email,
@@ -137,19 +140,10 @@ def payments(request,):
             cancel_url=request.build_absolute_uri(reverse('cancel')),
         )
         return redirect(checkout_session.url, code=303)
-        # return JsonResponse({'id': checkout_session.id})
+    
         
     return render(request, 'orders/payments.html')
 
-
-def success(request):
-    """ A view to return the success page """
-
-    return render(request, 'orders/success.html')
-
-def cancel(request):
-
-    return render(request, 'orders/cancel.html')
 
 
 logger = logging.getLogger(__name__)
@@ -200,23 +194,59 @@ def stripe_webhook(request):
             order.is_ordered = True
             order.status = 'Completed'
             order.save()
+            
         else:
-
             return HttpResponse(status=400)
         
-        cart_items = CartItem.objects.filter(user=user)
-
-        for item in cart_items:
-            order_item = OrderItem()
-            order_item.order = order
-            order_item.payment = payment
-            order_item.user = user
-            order_item.product = item.product
-            order_item.quantity = item.quantity
-            order_item.product_price = item.product.price
-            order_item.ordered = True
-            order_item.save()
-
-    
+        
     return HttpResponse(status=200)
     
+
+def success(request):
+    """ A view to return the success page """
+
+    order = Order.objects.filter(user=request.user, is_ordered=True).order_by('-created_at').first()
+    payment = Payment.objects.filter(user=request.user, order=order).first()
+
+    user = request.user
+    cart = Cart.objects.get(cart_id=cart_id(request))
+    cart_items = CartItem.objects.filter(cart=cart, is_active=True)
+
+    cart_items.delete()
+
+    subject = 'Order Confirmation'
+    template = 'orders/email_confirmation.html'
+    context = {
+        'order': order,
+        'user': user,
+        'cart_items': cart_items,
+        'payment': payment,
+    }
+    html_message = render_to_string(template, context)
+    plain_message = strip_tags(html_message)
+    from_email = settings.EMAIL_HOST_USER
+    to = user.email
+
+    send_mail(
+        subject, 
+        plain_message,
+        from_email, 
+        [to], 
+        html_message=html_message
+        )
+
+    context = {
+
+        'order': order,
+        'user': user,
+        'cart_items': cart_items,
+        'payment': payment,
+    }
+
+    return render(request, 'orders/success.html', context)
+
+
+
+def cancel(request):
+
+    return render(request, 'orders/cancel.html')
