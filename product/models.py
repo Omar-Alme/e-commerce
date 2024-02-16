@@ -51,6 +51,16 @@ class Product_options(models.Model):
 
 
 
+class Product_gallery(models.Model):
+    product = models.ForeignKey(Product, default=None, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='photo/products', blank=True, max_length=255)
+    created_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.product.product_name
     
+    class Meta:
+        verbose_name = 'product_gallery'
+        verbose_name_plural = 'product gallery'
 
 
