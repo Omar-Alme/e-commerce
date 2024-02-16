@@ -9,7 +9,6 @@ def home(request):
 
     random_products = random.sample(list(products), min(len(products), 6))
 
-
     context = {
         'products': random_products,
     }

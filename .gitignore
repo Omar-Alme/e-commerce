@@ -11,4 +11,6 @@ venv/
 static/admin/
 env.py
 staticfiles/
-```
+.venv/
+*.sqlite3
+

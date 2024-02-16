@@ -7,14 +7,15 @@ from django.contrib.auth.decorators import login_required
 import requests
 from orders.models import Order
 
-# Create your views here.
+
 @login_required
 def dashboard(request):
     """ A view to return the dashboard page """
 
-    orders = Order.objects.order_by('-created_at').filter(user=request.user, is_ordered=True)
+    orders = Order.objects.order_by('-created_at').filter(
+        user=request.user, is_ordered=True)
     order_count = orders.count()
-    
+
     userprofile = UserProfile.objects.get(user=request.user)
 
     context = {
@@ -24,6 +25,7 @@ def dashboard(request):
     }
 
     return render(request, 'users/dashboard.html', context)
+
 
 class ExtendedSignupView(SignupView):
     form_class = ExtendedSignupForm
@@ -43,7 +45,8 @@ class ExtendedSignupView(SignupView):
 def order_history(request):
     """ A view to return the order history page """
 
-    orders = Order.objects.filter(user=request.user, is_ordered=True).order_by('-created_at')
+    orders = Order.objects.filter(
+        user=request.user, is_ordered=True).order_by('-created_at')
 
     context = {
         'orders': orders,
@@ -52,14 +55,17 @@ def order_history(request):
     return render(request, 'users/order_history.html', context)
 
 
-
 def edit_profile(request):
     """ A view to return the edit profile page """
     
     userprofile = get_object_or_404(UserProfile, user=request.user)
     if request.method == 'POST':
         user_form = UserForm(request.POST, instance=request.user)
-        profile_form = UserProfileForm(request.POST, request.FILES, instance=userprofile)
+        profile_form = UserProfileForm(
+            request.POST,
+            request.FILES,
+            instance=userprofile
+            )
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
@@ -69,13 +75,11 @@ def edit_profile(request):
     else:
         user_form = UserForm(instance=request.user)
         profile_form = UserProfileForm(instance=userprofile)
-            
+
     context = {
         'user_form': user_form,
         'profile_form': profile_form,
         'userprofile': userprofile,
     }
-    
+
     return render(request, 'users/edit_profile.html', context)
-
-

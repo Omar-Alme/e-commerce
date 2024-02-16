@@ -2,7 +2,6 @@ from django.db import models
 from users.models import User
 from product.models import Product, Product_options
 
-# Create your models here.
 
 class Payment(models.Model):
     """A model to store payment details"""
@@ -15,12 +14,10 @@ class Payment(models.Model):
 
     def __str__(self):
         return self.payment_id
-    
+
 
 class Order(models.Model):
     """A model to store order details"""
-
-
     STATUS = (
         ('New', 'New'),
         ('Accepted', 'Accepted'),
@@ -29,7 +26,7 @@ class Order(models.Model):
     )
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    payment = models.ForeignKey(Payment, on_delete=models.SET_NULL, blank=True, 
+    payment = models.ForeignKey(Payment, on_delete=models.SET_NULL, blank=True,
                                 null=True)
     order_number = models.CharField(max_length=100)
     first_name = models.CharField(max_length=100)
@@ -50,26 +47,23 @@ class Order(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     is_ordered = models.BooleanField(default=False)
 
-
     class Meta:
         ordering = ['-created_at']
 
     def address(self):
         return f'{self.address1} {self.address2}'
-    
+
     def full_name(self):
         return f'{self.first_name} {self.last_name}'
-        
-
 
     def __str__(self):
         return self.user.first_name
-    
+
 
 class OrderItem(models.Model):
     """A model to store users completed orders"""
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
-    payment = models.ForeignKey(Payment, on_delete=models.SET_NULL, blank=True, 
+    payment = models.ForeignKey(Payment, on_delete=models.SET_NULL, blank=True,
                                 null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
@@ -79,7 +73,6 @@ class OrderItem(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     ordered = models.BooleanField(default=False)
-
 
     def __str__(self):
         return self.product.product_name
