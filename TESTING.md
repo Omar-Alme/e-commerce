@@ -49,56 +49,120 @@
 
 #### Cart App
  - admin.py
+ ![Admin Cart](documentation/validations/cartadmin.png)
 
  - context_processor.py
+ ![Context Cart](documentation/validations/cartcontext.png)
 
  - models.py
+ ![Model Cart](documentation/validations/cartmodel.png)
 
  - urls.py
+ ![URLS Cart](documentation/validations/carturl.png)
 
  - views.py
+ ![Views Cart](documentation/validations/cartview.png)
 
 
 #### Category App
  - admin.py
+ ![Admin Category](documentation/validations/categoryadmin.png)
 
  - context_processor.py
+ ![Context Category](documentation/validations/categorycontext.png)
 
  - models.py
+ ![Model Category](documentation/validations/categorymodel.png)
 
- - urls.py
-
- - views.py
 
 #### Orders App
  - admin.py
 
- - context_processor.py
+ ![Admin Order](documentation/validations/orderadmin.png)
 
  - models.py
 
- - urls.py
+ ![Model Order](documentation/validations/ordermodel.png)
+
+ - Form.py
+ ![Form Order](documentation/validations/orderform.png)
 
  - views.py
+ ![View Order](documentation/validations/orderview.png)
 
 #### Product App
  - admin.py
-
- - context_processor.py
+ ![Admin Product](documentation/validations/productadmin.png)
 
  - models.py
-
- - urls.py
+ ![Model Product](documentation/validations/productmodel.png)
 
  - views.py
+ ![View Product](documentation/validations/productview.png)
 
 #### Users App
  - admin.py
-
- - context_processor.py
+ ![Admin User](documentation/validations/useradmin.png)
 
  - models.py
+ ![Model User](documentation/validations/usermodel.png)
 
- - urls.py
+ - Form.py
+ ![Admin User](documentation/validations/userform.png)
 
  - views.py
+ ![Admin User](documentation/validations/userviews.png)
+
+
+### W3C Jigsaw Validation
+
+    There consists only one base.css file. 
+
+![CSS Validation](documentation/validations/cssvalid.png)
+
+### HTML Validation
+
+
+
+
+
+
+## Lighthouse
+     
+ - Home Page
+![Home Lighthouse](documentation/lighthouse/homelighthouse.png)
+
+
+- Product Page
+![Product Lighthouse](documentation/lighthouse/productslighthosue.png)
+
+
+- Product Detail Page
+![Product detail Lighthouse](documentation/lighthouse/productdetail-lighthouse.png)
+
+- Cart Page
+![Home Lighthouse](documentation/lighthouse/cartlighthouse.png)
+
+- Sign Up Page
+![Signup Lighthouse](documentation/lighthouse/singuplighthouse.png)
+
+- Sign in Page
+![Signin Lighthouse](documentation/lighthouse/singinlighthouse.png)
+
+- Reset Password
+![Reset Password Lighthouse](documentation/lighthouse/passwordreset-lighthouse.png)
+
+- Dashboard Page
+![Dashboard Lighthouse](documentation/lighthouse/dashboardlighthouse.png)
+
+- Edit Profile Page
+![Edit Profile Lighthouse](documentation/lighthouse/accountsettinglighthouse.png)
+
+- Order History Page
+![Home Lighthouse](documentation/lighthouse/orderhistoryligthouse.png)
+
+- Checkout Page
+![Home Lighthouse](documentation/lighthouse/checkoutligthhouse.png)
+
+- Success Checkout Page
+![Home Lighthouse](documentation/lighthouse/successcheckout-lighthouse.png)
