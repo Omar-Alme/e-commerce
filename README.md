@@ -1,5 +1,4 @@
-# Client - Management
-
+# DripDrop E-commerce Store
 Live Version: [e-commerce]()
 
 Repository: [GitHub Repo](https://github.com/Omar-Alme/e-commerce/)
