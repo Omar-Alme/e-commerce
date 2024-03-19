@@ -43,8 +43,9 @@ class MyAccountManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
+
 class User(AbstractBaseUser):
-    """A model to store user details. Inherits from AbstractBaseUser."""	
+    """A model to store user details. Inherits from AbstractBaseUser."""
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
     username = models.CharField(max_length=200, unique=True)
@@ -91,9 +92,9 @@ class UserProfile(models.Model):
     state = models.CharField(max_length=100, blank=True)
     country = models.CharField(max_length=100, blank=True)
     zipcode = models.CharField(max_length=20, blank=True)
-    
+
     def __str__(self):
         return self.user.first_name
-    
+
     def full_address(self):
         return f'{self.address1} {self.address2}'

@@ -13,4 +13,10 @@ env.py
 staticfiles/
 .venv/
 *.sqlite3
+.elasticbeanstalk/
 
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

@@ -2,7 +2,7 @@ from django.db import models
 from product.models import Product, Product_options
 from users.models import User
 
-# Create your models here.
+
 class Cart(models.Model):
     cart_id = models.CharField(max_length=250, blank=True)
     date_added = models.DateField(auto_now_add=True)

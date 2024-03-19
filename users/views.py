@@ -57,7 +57,7 @@ def order_history(request):
 
 def edit_profile(request):
     """ A view to return the edit profile page """
-    
+
     userprofile = get_object_or_404(UserProfile, user=request.user)
     if request.method == 'POST':
         user_form = UserForm(request.POST, instance=request.user)

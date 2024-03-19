@@ -67,4 +67,3 @@ class UserProfileForm(forms.ModelForm):
             self.fields['profile_picture'].widget.attrs.update(
                 {'class': 'form-control-file'}
                 )
-        
