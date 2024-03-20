@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG') == 'True'
 
 
-ALLOWED_HOSTS = ['', 'localhost', '127.0.0.1', 'e-commerce-env.eba-cnmjfjjb.eu-north-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['', 'localhost', '127.0.0.1', 'e-commerce-django-3772a6dfd2f6.herokuapp.com']
 
 
 # Application definition
