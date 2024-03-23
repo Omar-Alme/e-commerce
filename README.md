@@ -84,12 +84,15 @@ Social Media Presence: We maintain active profiles on Instagram, TikTok, and Fac
 
 ### Tiktok Page
 
+Post a bunch of short reels on tiktok for free organic growth.
 
 ### Facebook Page
 
+![Instagram mockup](documentation/facebook.png)
 
 ### Instagram Page
 
+![Facebook mockup](documentation/instagram.png)
 
 Newsletter Subscription: Stay in the loop with our newsletter, delivering curated content, special promotions, and insider updates directly to your inbox. Subscribe to receive exclusive offers, early access to sales, and the latest news from DripDrop.
 
@@ -179,8 +182,6 @@ TThe application's design adheres to the principles of Material Design, emphasiz
 ### Typography
 
 The font used throughout the application is Archivo.
-
-![Typography]()
 
 ARCHIVO was chosen for its modern and clean design, aligning with the application's focus on simplicity and user-friendly aesthetics. Its versatility and readability enhance the overall visual appeal, contributing to a cohesive and contemporary design language.
 
@@ -290,6 +291,15 @@ Product Options:
 | option_category| CharField     | Category of the option (e.g., color, size) |
 | option_value   | CharField     | Value of the option                |
 | is_active      | BooleanField  | Flag indicating if option is active |
+| created_date   | DateTimeField | Date and time when option was created |
+
+
+Product Gallery:
+
+| Field          | Type          | Description                        |
+|----------------|---------------|------------------------------------|
+| product        | Foreignkey    | product id                         |
+| image          | ImageField    | Images of the product              |
 | created_date   | DateTimeField | Date and time when option was created |
 
 
