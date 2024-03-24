@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class MyAccountManager(BaseUserManager):
@@ -84,7 +86,7 @@ class UserProfile(models.Model):
         User, on_delete=models.CASCADE, primary_key=True
         )
     profile_picture = models.ImageField(
-        upload_to='userprofile', null=True, blank=True
+        upload_to='userprofile/', null=True, blank=True
         )
     address1 = models.CharField(max_length=250, blank=True)
     address2 = models.CharField(max_length=250, blank=True)
@@ -93,8 +95,21 @@ class UserProfile(models.Model):
     country = models.CharField(max_length=100, blank=True)
     zipcode = models.CharField(max_length=20, blank=True)
 
+    
+
     def __str__(self):
         return self.user.first_name
 
     def full_address(self):
         return f'{self.address1} {self.address2}'
+    
+
+# @receiver(post_save, sender=User)
+# def create_or_update_user_profile(sender, instance, created, **kwargs):
+#     """
+#     Create or update the user profile
+#     """
+#     if created:
+#         UserProfile.objects.create(user=instance)
+#     # Existing users: just save the profile
+#     instance.userprofile.save()
