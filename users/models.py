@@ -95,21 +95,8 @@ class UserProfile(models.Model):
     country = models.CharField(max_length=100, blank=True)
     zipcode = models.CharField(max_length=20, blank=True)
 
-    
-
     def __str__(self):
         return self.user.first_name
 
     def full_address(self):
         return f'{self.address1} {self.address2}'
-    
-
-# @receiver(post_save, sender=User)
-# def create_or_update_user_profile(sender, instance, created, **kwargs):
-#     """
-#     Create or update the user profile
-#     """
-#     if created:
-#         UserProfile.objects.create(user=instance)
-#     # Existing users: just save the profile
-#     instance.userprofile.save()
