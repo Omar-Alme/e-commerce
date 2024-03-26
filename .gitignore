@@ -14,7 +14,7 @@ staticfiles/
 .venv/
 *.sqlite3
 .elasticbeanstalk/
-
+media/userprofile/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
