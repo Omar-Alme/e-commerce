@@ -1,16 +1,23 @@
 {% load static %}
 <footer class="section-footer border-top bg-light padding-y mt-auto">
     <div class="container">
-        <section class="footer-bottom border-top row">
+        <section class="footer-bottom border-top row align-items-center">
             <div class="col-md-4">
                 <p class="text-muted">&copy; 2024 DRIPDROP</p>
             </div>
-            <div class="col-md-4 text-center">
-                <span class="px-2">info.dripdrop.se@gmail.com.com</span>
-                <span class="px-2">+46 729162986</span>
-                <span class="px-2">Luxury Street, City</span>
+            <div class="col-md-4 text-center py-3">
+                <form action="{% url 'subscribe' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input type="email" name="email" class="form-control" placeholder="Your email address" required>
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-dark">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+                <span class="text-muted d-block mt-2">Stay updated with our latest offers and news!</span>
             </div>
-            <div class="col-md-2 text-right">
+            <div class="col-md-4 text-right">
                 <a href="https://www.facebook.com/" target="_blank" class="text-muted px-2">
                     <i class="fab fa-facebook-f fa-lg"></i>
                 </a>
@@ -18,11 +25,7 @@
                     <i class="fab fa-instagram fa-lg"></i>
                 </a>
             </div>
-            <div class="col-md-2 text-right">
-                <i class="fab fa-cc-visa fa-lg text-muted"></i>
-                <i class="fab fa-cc-stripe fa-lg text-muted"></i>
-                <i class="fab fa-cc-mastercard fa-lg text-muted"></i>
-            </div>
         </section>
     </div>
 </footer>
+

@@ -44,8 +44,11 @@
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-            {% include 'includes/messages/messages_success.html' %}
-            {% include 'includes/messages/messages_error.html' %}
+            {% if message.tags == 'success'%}
+                {% include 'includes/messages/messages_success.html' %}
+            {% elif message.tags == 'error' %}
+                {% include 'includes/messages/messages_error.html' %}
+            {% endif %}
         {% endfor %}
     </div>
     {% endif %} 
@@ -58,10 +61,15 @@
 
 
 {% block extra_js %}
+{% endblock %}
+
 <script type="text/javascript">
     $(document).ready(function() {
         $('.toast').toast('show');
         
+        setTimeout(function() {
+            $('.toast').toast('hide');
+        }, 15000);
     });
 
     $(document).ready(function(){
@@ -70,9 +78,7 @@
             $('.main-image img').attr('src', $(this).attr('href'));
         });
     })
-
 </script>
-{% endblock %}
 </body>
 
 </html>

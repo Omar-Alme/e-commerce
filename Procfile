@@ -1,1 +1,1 @@
-web: gunicorn superkart.wsgi
+web: gunicorn superkart.wsgi:application

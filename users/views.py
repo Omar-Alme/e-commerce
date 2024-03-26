@@ -7,6 +7,23 @@ from django.contrib.auth.decorators import login_required
 import requests
 from orders.models import Order
 
+
+@login_required
+def dashboard(request):
+    """ A view to return the dashboard page """
+
+    orders = Order.objects.order_by('-created_at').filter(
+        user=request.user, is_ordered=True)
+    order_count = orders.count()
+    userprofile = get_object_or_404(UserProfile, user=request.user)
+    
+    context = {
+        'orders': orders,
+        'order_count': order_count,
+        'userprofile': userprofile,
+    }
+
+    return render(request, 'users/dashboard.html', context)
 class ExtendedSignupView(SignupView):
     form_class = ExtendedSignupForm
     template_name = 'account/signup.html'
@@ -23,7 +40,6 @@ class ExtendedSignupView(SignupView):
         ret = super(ExtendedSignupView, self).get_context_data(**kwargs)
         ret.update(self.kwargs)
         return ret
-
 
 def order_history(request):
     """ A view to return the order history page """
@@ -66,21 +82,3 @@ def edit_profile(request):
     }
 
     return render(request, 'users/edit_profile.html', context)
-
-
-@login_required
-def dashboard(request):
-    """ A view to return the dashboard page """
-
-    orders = Order.objects.order_by('-created_at').filter(
-        user=request.user, is_ordered=True)
-    order_count = orders.count()
-    userprofile = get_object_or_404(UserProfile, user=request.user)
-    
-    context = {
-        'orders': orders,
-        'order_count': order_count,
-        'userprofile': userprofile,
-    }
-
-    return render(request, 'users/dashboard.html', context)
