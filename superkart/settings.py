@@ -190,15 +190,19 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
-STATICFILES_DIRS = [
-        'superkart/static',
-]
+# STATICFILES_DIRS = [
+#         'superkart/static',
+# ]
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Media Folder Settings
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
 
 if 'USE_AWS' in os.environ:
     # Bucket Config	
