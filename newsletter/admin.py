@@ -10,4 +10,3 @@ class SubscriberAdmin(admin.ModelAdmin):
 
     
 admin.site.register(Subscriber)
-

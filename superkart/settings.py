@@ -196,6 +196,10 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
+
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Media Folder Settings
@@ -205,6 +209,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 if 'USE_AWS' in os.environ:
+    #Cache Control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
     # Bucket Config	
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_REGION_NAME = os.environ.get('AWS_S3_REGION_NAME')
