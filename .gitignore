@@ -15,7 +15,7 @@ staticfiles/
 *.sqlite3
 .elasticbeanstalk/
 media/userprofile/
-
+erd.dot
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

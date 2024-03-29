@@ -1,5 +1,5 @@
 # DripDrop E-commerce Store
-Live Version: [e-commerce]()
+Live Version: [e-commerce](https://e-commerce-django-3772a6dfd2f6.herokuapp.com/)
 
 Repository: [GitHub Repo](https://github.com/Omar-Alme/e-commerce/)
 
@@ -9,7 +9,7 @@ The app is developed by [Omar Al-mehdhar](https://github.com/Omar-Alme)
 
 ## About
 
-[E-commerce App](): Welcome to DripDrop - Your Ultimate Destination for Hypebeast Streetwear and Sneakers
+[E-commerce App](https://e-commerce-django-3772a6dfd2f6.herokuapp.com/): Welcome to DripDrop - Your Ultimate Destination for Hypebeast Streetwear and Sneakers
 
 DripDrop is not just another eCommerce app; it's a haven for enthusiasts of hypebeast streetwear and sneaker culture. Here, we bring together a curated collection of the most coveted brands and exclusive releases, making it easier than ever for fashion-forward individuals to stay ahead of the game.
 
@@ -135,8 +135,8 @@ Enabling users to create wishlists allows them to save desired items for future 
 - ### Databases:
 
     + [SQLite](https://www.sqlite.org/): the development database.
-    + [PostgreSQL](https://www.postgresql.org/): the database used to store all the data.  
-  
+    + [PostgreSQL](https://www.postgresql.org/): the database used to store all the data.
+
 - ### Other tools:
 
     + [Git](https://git-scm.com/): version control tool to manage the code
@@ -159,7 +159,7 @@ Enabling users to create wishlists allows them to save desired items for future 
     + [Sitemap Generator](https://www.xml-sitemaps.com/) was used to create the sitemap.xml file.
     + [Django-extensions](https://django-extensions.readthedocs.io/en/latest/) was used to create a Entity-Relationship Diagram.
     + [Canva](https://stripe.com/): was used to create the banners, logo and some images.
-
+    + [AWS S3](https://aws.amazon.com/s3/): an object storage service storing static and media files.
 
 
 
@@ -208,6 +208,7 @@ In the project's initial phases, the database was established utilizing SQLite f
 
 ### Entity-Relationship Diagram
 
+![ERD](documentation/erd.svg)
 
 
 ### Data models
@@ -304,6 +305,9 @@ Product Gallery:
 
 
 
+
+
+
 ## Testing 
 
 Please refer back to [TESTING.md](TESTING.md) file for all test-related documentation.
@@ -323,12 +327,17 @@ Please refer back to [DEPLOYMENT.md](DEPLOYMENT.md) file for all test-related do
  - [Very Academy Youtube Channel](https://www.youtube.com/c/veryacademy): for brilliant tutorials, which shed the light on the implementation of database with multi-values products, precise explanations of the stripe API.
  - [Rinak Nandanwar](https://www.youtube.com/watch?v=GxeS46hhUsM&list=PLckF35yRVp3PYUSIvcm-zmrI9KwLb0yPo&index=17): For he's E commerce django playlist which helped me in many ways.
  - [CodingEntrepreneaurs Youtube](https://www.youtube.com/watch?v=qx9nshX9CQQ): Detailed Micro E commerce tutotial for some of the functionalities.
+ - AWS S3 Documentations
+ - [Monclear](https://www.moncler.com/en-se/): For Jacket photos
+ - [StockX](https://stockx.com/): For sneaker photos
+ - [AWS s3 Static and media files](https://www.youtube.com/watch?v=ahBG_iLbJPM): Help with implementing AWS Media and static storage files.
 
 
 
 ## Acknowledgments
 
  - [Juliia Konovalova](https://github.com/IuliiaKonovalova) For guiding me so much with everything and giving me tips and ideas for my project. Kept me grounded and patient when stressed.
+ - [Martina Terlevic](https://github.com/SephTheOverwitch) For guiding me and helping solve many deployment issues.
  - Most importantly the Code institute Community and fellow students.
 
 

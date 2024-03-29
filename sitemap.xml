@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-1/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-4/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/nike-dunks/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/tracksuits/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jewellery/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/puffer-jackets/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/cart/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/puffer-jackets/palm-angels-reflective/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/puffer-jackets/monclear-royal/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/nike-dunks/dunks-b-j-chunky-dunky/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-4/jordan-4-retro-psg/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/puffer-jackets/monclear-puffer/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/puffer-jackets/monclear-shiny/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-1/jordan-1-grey-green-mid/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-1/jordan-1-mocha/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-1/jordan-1-retro-reverse-mocha-low/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-1/jordan-1-university-blue/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-4/jordan-4-black-canvas/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-4/jordan-4-fire-red/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-4/jordan-4-lightning/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-4/jordan-4-midnight-navy/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-4/jordan-4-retro-se-craft-photon-dust/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-4/jordan-4-retro-metallic-red/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-4/jordan-4-retro-taupe-faze/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/?page=2</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/?page=3</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jordan-4/jordan-4-retro-unc/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/nike-dunks/dunks-active-fuchsia/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/nike-dunks/dunks-disrupt-2-desert-bronze/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/nike-dunks/dunks-disrupt-2-hyper-royal/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/nike-dunks/dunks-pink-foam/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/nike-dunks/dunks-retro-sun-club-multi/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/nike-dunks/dunks-photon-dust/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/tracksuits/trapstar-blue-royalty/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/tracksuits/trapstar-pinky-grey/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/tracksuits/trapstar-black/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jewellery/tennis-chain-white-diamond/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/category/jewellery/tennis-bracelet/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://e-commerce-django-3772a6dfd2f6.herokuapp.com/products/?page=1</loc>
+  <lastmod>2024-03-29T15:15:34+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
