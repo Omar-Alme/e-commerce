@@ -4,7 +4,7 @@
 
 ![Cart Page](documentation/features/cart.png)
 
-![Checkout Form Page](documentation/features/checkoutform.png)
+![Checkout Form Page](documentation/features/checkouform.png)
 
 ![Dashboard Page](documentation/features/dashboard.png)
 

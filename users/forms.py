@@ -27,7 +27,7 @@ class ExtendedSignupForm(SignupForm):
         user.save()
 
         UserProfile.objects.create(user=user)
-        
+
         return user
 
 

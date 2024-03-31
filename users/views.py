@@ -16,7 +16,7 @@ def dashboard(request):
         user=request.user, is_ordered=True)
     order_count = orders.count()
     userprofile = get_object_or_404(UserProfile, user=request.user)
-    
+
     context = {
         'orders': orders,
         'order_count': order_count,
@@ -24,6 +24,8 @@ def dashboard(request):
     }
 
     return render(request, 'users/dashboard.html', context)
+
+
 class ExtendedSignupView(SignupView):
     form_class = ExtendedSignupForm
     template_name = 'account/signup.html'
@@ -40,6 +42,7 @@ class ExtendedSignupView(SignupView):
         ret = super(ExtendedSignupView, self).get_context_data(**kwargs)
         ret.update(self.kwargs)
         return ret
+
 
 def order_history(request):
     """ A view to return the order history page """

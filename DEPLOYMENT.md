@@ -1,4 +1,4 @@
-- The app was deployed to [Heroku]()
+- The app was deployed to [Heroku](https://e-commerce-django-3772a6dfd2f6.herokuapp.com/)
  - The database was deployed to [ElephantSQL](https://www.elephantsql.com/).
 
 ### Local Deployment
@@ -28,6 +28,8 @@ In your IDE Terminal, type the following command to clone my repository:
       os.environ['SECRET_KEY'] = 'Add a secret key'
       os.environ['DATABASE_URL'] = 'will be used to connect to the database'
       os.environ['DEBUG'] = 'True'
+
+      Include all stripe keys and AWS keys
     ```
 
     *During the development stage DEBUG is set to True, but it is vital to change it to False.*
@@ -102,6 +104,8 @@ Click on Reveal Config Vars and add the following config variables:
 | SECRET_KEY | ... |
 | PORT | ... |
 | DEBUG | ... |
+
+Include all stripe keys and AWS keys
 
 * Copy the value of DATABASE_URL and input it into the .env file and generate a secret key (you may use [Djecrety](https://djecrety.ir/) for secret key generation).
 * Create EMAIL_HOST_PASS and EMAIL_HOST_USER with a gmail account and add values to these keys.

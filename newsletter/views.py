@@ -21,5 +21,5 @@ def subscribe(request):
             from_email = settings.DEFAULT_FROM_EMAIL
             to_list = [email]
             send_mail(subject, message, from_email, to_list, fail_silently=True)
-            
+
     return redirect('/')

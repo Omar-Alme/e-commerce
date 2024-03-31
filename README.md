@@ -5,13 +5,17 @@ Repository: [GitHub Repo](https://github.com/Omar-Alme/e-commerce/)
 
 The app is developed by [Omar Al-mehdhar](https://github.com/Omar-Alme)
 
-![Home]()
+![Home](documentation/features/home.png)
 
 ## About
 
 [E-commerce App](https://e-commerce-django-3772a6dfd2f6.herokuapp.com/): Welcome to DripDrop - Your Ultimate Destination for Hypebeast Streetwear and Sneakers
 
 DripDrop is not just another eCommerce app; it's a haven for enthusiasts of hypebeast streetwear and sneaker culture. Here, we bring together a curated collection of the most coveted brands and exclusive releases, making it easier than ever for fashion-forward individuals to stay ahead of the game.
+
+Stripe Test Card Number: 4242 4242 4242 4242
+Date: Any future Date
+CVV: Any 3 digit number
 
 What Sets DripDrop Apart?
 
@@ -29,9 +33,8 @@ Fast Shipping: We understand that when you find the perfect piece, you want it A
 ### User Stories
 
 | Issue ID    | User Story |
-|-------------|-------------|
-|[#1](https://github.com/Omar-Alme/e-commerce/issues/1)|
-As a User I want to be able to View a list of Products so that I can select some to purchase.|
+|-------------|------------|
+|[#1](https://github.com/Omar-Alme/e-commerce/issues/1)|As a User I want to be able to View a list of Products so that I can select some to purchase.|
 |[#2](https://github.com/Omar-Alme/e-commerce/issues/2)|As a User I want to be able to View individual product details so that I can identify the price,description, rating, product image and available sizes.|
 |[#3](https://github.com/Omar-Alme/e-commerce/issues/3)|As a User I want to be able to quickly identify deals and special offers so that I can Take advantage of special savings on products I'd like to purchase.|
 |[#4](https://github.com/Omar-Alme/e-commerce/issues/4)|As a User I want to be able to View the total price of my purchases at anytime so that I can track and avoid spending too much.|
@@ -176,7 +179,7 @@ TThe application's design adheres to the principles of Material Design, emphasiz
 
 ### Colour Scheme
 
-![Color Schema]()
+Our ecommerce app embraces a clean and modern aesthetic with a predominantly white color scheme complemented by sleek black accents, especially noticeable in our buttons. This combination creates a minimalist yet sophisticated interface, allowing products and content to take center stage while maintaining an intuitive user experience. The use of white evokes a sense of purity, simplicity, and spaciousness, enhancing readability and visual appeal, while black accents add a touch of elegance and contrast, drawing attention to key elements and calls to action. Together, these colors contribute to a visually pleasing and user-friendly environment, ensuring a seamless shopping experience for our users.
 
 
 ### Typography
@@ -188,18 +191,12 @@ ARCHIVO was chosen for its modern and clean design, aligning with the applicatio
 
 ### Wireframes
 
- - 
+![Wireframe 1](documentation/wireframes/wireframe1.png)
+![Wireframe 2](documentation/wireframes/wireframe2.png)
+![Wireframe 3](documentation/wireframes/wireframe3.png)
+![Wireframe 4](documentation/wireframes/wireframe4.png)
 
  These were the wireframes aimed for. However alot of the designs and features were changed or altered. The look was similar but there are features that were not accomplished due to lack of time. These will be added in the future. 
- 
- Check [FEATURES.md](FEATURES.md) for future features.
-
-### Flowchart
-
-![Simple Flowchart]()
-
-This is a simple flowchart used. The flowcharts were created using [LucidChart](https://www.lucidchart.com/).
-
 
 ## Information Architecture
 
@@ -304,7 +301,61 @@ Product Gallery:
 | created_date   | DateTimeField | Date and time when option was created |
 
 
+#### Orders Models
 
+Payment:
+
+| Field          | Type          | Description                        |
+|----------------|---------------|------------------------------------|
+| user           | ForeignKey    | User purchasing                    |
+| payment_id     | Charfield     | Unique payment id                  |
+| payment_method | Charfield     | Payment method used                |
+| amount_paid    | Charfield     | Amount of the purchase             |
+| status         | Charfield     | Status of payment                  |
+| created_at     | DateTimeField | Date purchased                     |
+
+
+Order:
+
+STATUS = (
+        ('New', 'New'),
+        ('Accepted', 'Accepted'),
+        ('Completed', 'Completed'),
+        ('Cancelled', 'Cancelled'),
+    ) 
+
+| Field          | Type          | Description                        |
+|----------------|---------------|------------------------------------|
+| user           | ForeignKey    | User who ordered                   |
+| payment        | ForeignKey    | Payment model                      |
+| order_number   | Charfield     | Random generated order number      |
+| first_name     | CharField     | First name of the user             |
+| last_name      | CharField     | Last name of the user              |
+| email          | EmailField    | Unique email of the user           |
+| address1       | CharField     | Address line 1                     |
+| address2       | CharField     | Address Line 2                     |
+| city           | CharField     | City                               |
+| state          | CharField     | State                              |
+| country        | CharField     | Country                            |
+| zipcode        | CharField     | Zipcode                            |
+| phone          | CharField     | Phone details                      |
+| order_total    | DecimalField  | Final Total of the users order     |
+| tax            | DecimalField  | Tax added to order                 |
+| status         | CharField     | Status of the order                |
+| ip             | CharField     | IP address                         |
+| created_at     | DateTimeField | Created date of the order          |
+| updated_at     | DateTimeField | Updated time of the order          |
+| is_ordered     | BooleanField  | Is the order completed             |
+
+
+#### Newsletter Model
+
+Newsletter Subscriber:
+
+| Field          | Type          | Description                        |
+|----------------|---------------|------------------------------------|
+| email          | EmailField    | subscribers email                  |
+| date joined    | DateTimeField | Date subscribed                    |
 
 
 
